@@ -1,0 +1,26 @@
+var _g_a_typedefs_8h =
+[
+    [ "cv_expected_length", "_g_a_typedefs_8h.html#a4985f67fbab50c48b92e8620e60b6c91", null ],
+    [ "cv_feed_dest", "_g_a_typedefs_8h.html#acb1dc692f11808719b06f09779fe12df", null ],
+    [ "cv_fixed_prefix_length", "_g_a_typedefs_8h.html#a06ed6d727490420eab75362f1d6ac00f", null ],
+    [ "cv_has_valid_shape", "_g_a_typedefs_8h.html#ae0345498bbade167561de102c889e29e", null ],
+    [ "cv_is_product_dest", "_g_a_typedefs_8h.html#a344ba2526be78c71b03d7324c4a8584a", null ],
+    [ "cv_is_tailings_dest", "_g_a_typedefs_8h.html#adf72ff48d06812700db2ab4fa8114ad3", null ],
+    [ "cv_is_unit_dest", "_g_a_typedefs_8h.html#a4304d8d8543af05890f6ab4b6d0c6745", null ],
+    [ "cv_is_valid_dest", "_g_a_typedefs_8h.html#ac7737830795241384b267de955047378", null ],
+    [ "cv_num_feed", "_g_a_typedefs_8h.html#afc64901b0d4f97bb42e986fdf4ecf588", null ],
+    [ "cv_num_products", "_g_a_typedefs_8h.html#a500677c8e33185ebbdde798a687f7df0", null ],
+    [ "cv_num_units", "_g_a_typedefs_8h.html#afd6fce395995da5e78a95734482fccbc", null ],
+    [ "cv_tailings_dest", "_g_a_typedefs_8h.html#ad3f8d607aa5e9ee5c301d1bc0a628cd5", null ],
+    [ "cv_tails_output_index", "_g_a_typedefs_8h.html#a2b13651b05b0c745a3e1ca16bb3d9ec5", null ],
+    [ "cv_type_a_conc_output", "_g_a_typedefs_8h.html#aa84128c29f88edcad23a2ac6368eb69f", null ],
+    [ "cv_type_a_tails_output", "_g_a_typedefs_8h.html#a5511a20103913ea47852b4e82bdd1779", null ],
+    [ "cv_type_b_conc1_output", "_g_a_typedefs_8h.html#ad979230a45ea85fb42e9d9e47ac12318", null ],
+    [ "cv_type_b_conc2_output", "_g_a_typedefs_8h.html#a1d8fa8d0c756dd1220a82b01990533a5", null ],
+    [ "cv_type_b_tails_output", "_g_a_typedefs_8h.html#aa8d2e34ec37e1f35eb272dd76e077521", null ],
+    [ "cv_unit_dest", "_g_a_typedefs_8h.html#a6b15aeb69ca8eb5f016629757ff4514b", null ],
+    [ "cv_unit_dest_full_offset", "_g_a_typedefs_8h.html#aef13f70044d8b4539de95ef9e1bc070f", null ],
+    [ "cv_unit_type", "_g_a_typedefs_8h.html#a169b050010c9cd01ea55969c9a248112", null ],
+    [ "cv_variable_length", "_g_a_typedefs_8h.html#ada51f4de64f5a543239ca5d8aee628cf", null ],
+    [ "cv_variable_start", "_g_a_typedefs_8h.html#ada524178f7b5e1154db70a79dc74d677", null ]
+];

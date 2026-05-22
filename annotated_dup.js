@@ -17,6 +17,7 @@ var annotated_dup =
       [ "OptimiseExecutor", "classcli_1_1_optimise_executor.html", "classcli_1_1_optimise_executor" ],
       [ "OutputPaths", "structcli_1_1_output_paths.html", "structcli_1_1_output_paths" ],
       [ "ParseResult", "structcli_1_1_parse_result.html", "structcli_1_1_parse_result" ],
+      [ "SaOverrides", "structcli_1_1_sa_overrides.html", "structcli_1_1_sa_overrides" ],
       [ "ValidateExecutor", "classcli_1_1_validate_executor.html", "classcli_1_1_validate_executor" ],
       [ "VisualiseExecutor", "classcli_1_1_visualise_executor.html", "classcli_1_1_visualise_executor" ]
     ] ],
@@ -37,6 +38,8 @@ var annotated_dup =
     [ "GA_Functions", "struct_g_a___functions.html", "struct_g_a___functions" ],
     [ "GraphValidityCase", "struct_graph_validity_case.html", "struct_graph_validity_case" ],
     [ "RandomNumberGenerator", "class_random_number_generator.html", "class_random_number_generator" ],
+    [ "SA_Parameters", "struct_s_a___parameters.html", "struct_s_a___parameters" ],
+    [ "SConvergenceValidityResult", "struct_s_convergence_validity_result.html", "struct_s_convergence_validity_result" ],
     [ "SEconomicParameters", "struct_s_economic_parameters.html", "struct_s_economic_parameters" ],
     [ "VectorValidityCase", "struct_vector_validity_case.html", "struct_vector_validity_case" ]
 ];

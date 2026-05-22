@@ -144,6 +144,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output paths requested on the command line.  <a href="structcli_1_1_output_paths.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ParseResult" id="r_ParseResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcli_1_1_parse_result.html">ParseResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outcome of a parse attempt.  <a href="structcli_1_1_parse_result.html#details">More...</a><br /></td></tr>
+<tr class="memitem:SaOverrides" id="r_SaOverrides"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcli_1_1_sa_overrides.html">SaOverrides</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulated-annealing tuning parameters supplied through the CLI.  <a href="structcli_1_1_sa_overrides.html#details">More...</a><br /></td></tr>
 <tr class="memitem:ValidateExecutor" id="r_ValidateExecutor"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classcli_1_1_validate_executor.html">ValidateExecutor</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strategy that runs check_validity on one supplied circuit.  <a href="classcli_1_1_validate_executor.html#details">More...</a><br /></td></tr>
 <tr class="memitem:VisualiseExecutor" id="r_VisualiseExecutor"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classcli_1_1_visualise_executor.html">VisualiseExecutor</a></td></tr>
@@ -158,10 +160,14 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a01859dd944bdbe279e309627e6adbeef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation mode requested on the command line.  <a href="#a01859dd944bdbe279e309627e6adbeef">More...</a><br /></td></tr>
 <tr class="memitem:aceb74be7930f9524e6ccffbfc2fb0656" id="r_aceb74be7930f9524e6ccffbfc2fb0656"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#aceb74be7930f9524e6ccffbfc2fb0656">CasePreset</a> { <a class="el" href="#aceb74be7930f9524e6ccffbfc2fb0656a6adf97f83acf6453d4a6a4b1070f3754">None</a>
-, <a class="el" href="#aceb74be7930f9524e6ccffbfc2fb0656ae44bf5768e6e0c85d5904094f20336c9">Fixed10</a>
-, <a class="el" href="#aceb74be7930f9524e6ccffbfc2fb0656aabb2b24b4cb00ba9488557d758413834">Swappable8</a>
+, <a class="el" href="#aceb74be7930f9524e6ccffbfc2fb0656a4457d440870ad6d42bab9082d9bf9b61">Fixed</a>
+, <a class="el" href="#aceb74be7930f9524e6ccffbfc2fb0656aed0c3d91d14f803ce7606df208aeae0f">Swappable</a>
  }</td></tr>
 <tr class="memdesc:aceb74be7930f9524e6ccffbfc2fb0656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Built-in problem preset selected on the command line.  <a href="#aceb74be7930f9524e6ccffbfc2fb0656">More...</a><br /></td></tr>
+<tr class="memitem:ade808564ad484e615457a20c556b5e69" id="r_ade808564ad484e615457a20c556b5e69"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="#ade808564ad484e615457a20c556b5e69">OptimisationMethod</a> { <a class="el" href="#ade808564ad484e615457a20c556b5e69a64568d6794fa41d2e0bcefaaea26692f">GeneticAlgorithm</a>
+, <a class="el" href="#ade808564ad484e615457a20c556b5e69a9e54e50d057e08825382c09877dede7f">SimulatedAnnealing</a>
+ }</td></tr>
+<tr class="memdesc:ade808564ad484e615457a20c556b5e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimisation algorithm requested for &ndash;mode optimise.  <a href="#ade808564ad484e615457a20c556b5e69">More...</a><br /></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="aceb74be7930f9524e6ccffbfc2fb0656" name="aceb74be7930f9524e6ccffbfc2fb0656"></a>
@@ -187,8 +193,8 @@ Enumerations</h2></td></tr>
 <p>Built-in problem preset selected on the command line. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aceb74be7930f9524e6ccffbfc2fb0656a6adf97f83acf6453d4a6a4b1070f3754" name="aceb74be7930f9524e6ccffbfc2fb0656a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aceb74be7930f9524e6ccffbfc2fb0656ae44bf5768e6e0c85d5904094f20336c9" name="aceb74be7930f9524e6ccffbfc2fb0656ae44bf5768e6e0c85d5904094f20336c9"></a>Fixed10&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aceb74be7930f9524e6ccffbfc2fb0656aabb2b24b4cb00ba9488557d758413834" name="aceb74be7930f9524e6ccffbfc2fb0656aabb2b24b4cb00ba9488557d758413834"></a>Swappable8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aceb74be7930f9524e6ccffbfc2fb0656a4457d440870ad6d42bab9082d9bf9b61" name="aceb74be7930f9524e6ccffbfc2fb0656a4457d440870ad6d42bab9082d9bf9b61"></a>Fixed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aceb74be7930f9524e6ccffbfc2fb0656aed0c3d91d14f803ce7606df208aeae0f" name="aceb74be7930f9524e6ccffbfc2fb0656aed0c3d91d14f803ce7606df208aeae0f"></a>Swappable&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_cli_parser_8h_source.html#l00027">27</a> of file <a class="el" href="_cli_parser_8h_source.html">CliParser.h</a>.</p>
@@ -224,6 +230,37 @@ Enumerations</h2></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="_cli_parser_8h_source.html#l00017">17</a> of file <a class="el" href="_cli_parser_8h_source.html">CliParser.h</a>.</p>
+
+</div>
+</div>
+<a id="ade808564ad484e615457a20c556b5e69" name="ade808564ad484e615457a20c556b5e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade808564ad484e615457a20c556b5e69">&#9670;&#160;</a></span>OptimisationMethod</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ade808564ad484e615457a20c556b5e69">cli::OptimisationMethod</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optimisation algorithm requested for &ndash;mode optimise. </p>
+<p>GeneticAlgorithm is the default; SimulatedAnnealing runs a single-trajectory annealer that shares the simulator-side hooks with the GA. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ade808564ad484e615457a20c556b5e69a64568d6794fa41d2e0bcefaaea26692f" name="ade808564ad484e615457a20c556b5e69a64568d6794fa41d2e0bcefaaea26692f"></a>GeneticAlgorithm&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ade808564ad484e615457a20c556b5e69a9e54e50d057e08825382c09877dede7f" name="ade808564ad484e615457a20c556b5e69a9e54e50d057e08825382c09877dede7f"></a>SimulatedAnnealing&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="_cli_parser_8h_source.html#l00039">39</a> of file <a class="el" href="_cli_parser_8h_source.html">CliParser.h</a>.</p>
 
 </div>
 </div>

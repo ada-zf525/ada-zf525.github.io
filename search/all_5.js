@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['failure_5ffitness_0',['failure_fitness',['../structmass__balance_1_1_s_simulation_options.html#a1f84bf9f3e8b856df95e46837cc44009',1,'mass_balance::SSimulationOptions']]],
-  ['failure_5freason_1',['failure_reason',['../structmass__balance_1_1_s_simulation_result.html#a12409fbd93b2e9fdb7ffeb07df08a478',1,'mass_balance::SSimulationResult']]],
-  ['feed_5fdestination_2',['feed_destination',['../structcircuit__vector_1_1_circuit_spec.html#af8d8a3ca8e9fc1f70e99d7dd34978332',1,'circuit_vector::CircuitSpec']]],
-  ['feed_5fgormanium_5fkg_5fs_3',['feed_gormanium_kg_s',['../structcli_1_1_economic_overrides.html#ae32d14da6ab10b7e6a6683e82d8b2207',1,'cli::EconomicOverrides']]],
-  ['feed_5fpalusznium_5fkg_5fs_4',['feed_palusznium_kg_s',['../structcli_1_1_economic_overrides.html#a96b48e2d7a027e883df7a924b4bfdd87',1,'cli::EconomicOverrides']]],
-  ['feed_5fwaste_5fkg_5fs_5',['feed_waste_kg_s',['../structcli_1_1_economic_overrides.html#a28d0c03a6180faaba675daf4e72aba84',1,'cli::EconomicOverrides']]],
-  ['fixed10_6',['Fixed10',['../namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656ae44bf5768e6e0c85d5904094f20336c9',1,'cli']]],
-  ['fixed_5fprefix_7',['fixed_prefix',['../structcli_1_1_circuit_inputs.html#a37edd2bb2703973da7530511450c816c',1,'cli::CircuitInputs']]]
+  ['economic_0',['economic',['../structcli_1_1_cli_options.html#a45c6aa4c3db9d5b123a4675aabe84f7a',1,'cli::CliOptions']]],
+  ['economic_20sensitivity_20studies_3a_1',['Economic Sensitivity Studies:',['../index.html#autotoc_md6',1,'']]],
+  ['economicoverrides_2',['EconomicOverrides',['../structcli_1_1_economic_overrides.html',1,'cli']]],
+  ['elitism_5fcount_3',['elitism_count',['../structcli_1_1_ga_overrides.html#a7c924efec0196e7c7516991a58c97528',1,'cli::GaOverrides::elitism_count'],['../struct_algorithm___parameters.html#a655369786eab888af5b9a7beff3fffed',1,'Algorithm_Parameters::elitism_count']]],
+  ['encode_5fcircuit_5fvector_4',['encode_circuit_vector',['../namespacecircuit__vector.html#a6ccc80342aa871a7c2528e9b73b3123b',1,'circuit_vector']]],
+  ['error_5',['error',['../structcircuit__vector_1_1_parse_result.html#a011061f352c0294618ab369178486a5a',1,'circuit_vector::ParseResult::error'],['../structcli_1_1_parse_result.html#a2b3b332d4592dde0d352182c53bc0caa',1,'cli::ParseResult::error']]],
+  ['ese_6',['ESE',['../namespace_e_s_e.html',1,'']]],
+  ['esegraph_20submodule_7',['ESEGraph Submodule',['../index.html#autotoc_md12',1,'']]],
+  ['evaluate_8',['Evaluate',['../class_c_economic_model.html#a5830cd5903ff6da06093967cdbcc9cde',1,'CEconomicModel::Evaluate()'],['../namespacecli.html#a01859dd944bdbe279e309627e6adbeefab086843368d1c92d0a86cbee76b20b6f',1,'cli::Evaluate']]],
+  ['evaluateexecutor_9',['EvaluateExecutor',['../classcli_1_1_evaluate_executor.html',1,'cli::EvaluateExecutor'],['../classcli_1_1_evaluate_executor.html#a2fe046c176560cb130bc57535f0f49a9',1,'cli::EvaluateExecutor::EvaluateExecutor()']]],
+  ['evaluateperformance_10',['EvaluatePerformance',['../class_c_simulator.html#ad698e62cb9d0fe8527901216a6b454dd',1,'CSimulator']]],
+  ['execute_11',['Execute',['../classcli_1_1_i_mode_executor.html#ae6c2442a679ac0afb6fe6a6a9340a747',1,'cli::IModeExecutor::Execute()'],['../classcli_1_1_optimise_executor.html#a9228df74fd921b70968ac67e5fd9ff38',1,'cli::OptimiseExecutor::Execute()'],['../classcli_1_1_evaluate_executor.html#a3a64a951bef607bf84747b0679b3a231',1,'cli::EvaluateExecutor::Execute()'],['../classcli_1_1_validate_executor.html#a100f80d3ca403bd7bf31ae8d7aad0860',1,'cli::ValidateExecutor::Execute()'],['../classcli_1_1_visualise_executor.html#a55248a9bd8b56481ddf61a6b45661f0e',1,'cli::VisualiseExecutor::Execute()']]],
+  ['expected_5fvalid_12',['expected_valid',['../struct_vector_validity_case.html#aebf752735f5d358d72eda587cc5f1242',1,'VectorValidityCase::expected_valid'],['../struct_graph_validity_case.html#aef2fcac28dc361f582050d063e3c12f7',1,'GraphValidityCase::expected_valid']]]
 ];

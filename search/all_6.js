@@ -1,17 +1,15 @@
 var searchData=
 [
-  ['ga_0',['ga',['../structcli_1_1_cli_options.html#aba238630f70a3e89a772d0ad4e22f20d',1,'cli::CliOptions']]],
-  ['ga_5ffunctions_1',['GA_Functions',['../struct_g_a___functions.html',1,'']]],
-  ['gaoverrides_2',['GaOverrides',['../structcli_1_1_ga_overrides.html',1,'cli']]],
-  ['gatypedefs_2eh_3',['GATypedefs.h',['../_g_a_typedefs_8h.html',1,'']]],
-  ['generate_5fcircuit_5fvector_4',['generate_circuit_vector',['../_required_functions_8h.html#a5ff3ab9070b22ea8b448ca7b37e16d10',1,'RequiredFunctions.h']]],
-  ['genetic_5falgorithm_2ecpp_5',['Genetic_Algorithm.cpp',['../_genetic___algorithm_8cpp.html',1,'']]],
-  ['genetic_5falgorithm_2eh_6',['Genetic_Algorithm.h',['../_genetic___algorithm_8h.html',1,'']]],
-  ['global_5fseed_7',['global_seed',['../class_default_random_number_generator.html#a520958272352ef96fea5ba1f81530903',1,'DefaultRandomNumberGenerator']]],
-  ['gormanium_5fpenalty_5fin_5fp_5fstream_8',['gormanium_penalty_in_p_stream',['../struct_s_economic_parameters.html#a23b89145504850b7cee9c8f5f7562847',1,'SEconomicParameters::gormanium_penalty_in_p_stream'],['../structcli_1_1_economic_overrides.html#a73ac9387174a1582364485812ba51aca',1,'cli::EconomicOverrides::gormanium_penalty_in_p_stream']]],
-  ['gormanium_5fproduct_9',['gormanium_product',['../structmass__balance_1_1_s_product_streams.html#a9a63de430bdf64e6604b861499670129',1,'mass_balance::SProductStreams']]],
-  ['gormanium_5fvalue_5fin_5fg_5fstream_10',['gormanium_value_in_g_stream',['../struct_s_economic_parameters.html#af7b8ecd5e389d6d3956ebe0ab7a12ec8',1,'SEconomicParameters::gormanium_value_in_g_stream'],['../structcli_1_1_economic_overrides.html#ae79b80350ddcc604708717d7b92d8cc6',1,'cli::EconomicOverrides::gormanium_value_in_g_stream']]],
-  ['gormaniumproduct_11',['GormaniumProduct',['../namespacecircuit__vector.html#a169c3ff4e708268fdf95376fbd6c90d4a9e1bf47243f6cc8b9f944eb5b715c067',1,'circuit_vector']]],
-  ['graph_5fcheck_5fvalidity_12',['graph_check_validity',['../_circuit_validity_8h.html#a14b8d306b719e69bfdaa465b37dbb160',1,'graph_check_validity(const ESE::Graph &amp;graph):&#160;CircuitValidity.cpp'],['../_circuit_validity_8cpp.html#a14b8d306b719e69bfdaa465b37dbb160',1,'graph_check_validity(const ESE::Graph &amp;graph):&#160;CircuitValidity.cpp']]],
-  ['graphvaliditycase_13',['GraphValidityCase',['../struct_graph_validity_case.html',1,'']]]
+  ['failure_5ffitness_0',['failure_fitness',['../structmass__balance_1_1_s_simulation_options.html#a1f84bf9f3e8b856df95e46837cc44009',1,'mass_balance::SSimulationOptions']]],
+  ['failure_5freason_1',['failure_reason',['../struct_s_convergence_validity_result.html#a2437e7e9c5e27bc221cbe044bec8ce7f',1,'SConvergenceValidityResult::failure_reason'],['../structmass__balance_1_1_s_simulation_result.html#a12409fbd93b2e9fdb7ffeb07df08a478',1,'mass_balance::SSimulationResult::failure_reason']]],
+  ['feed_2',['feed',['../structmass__balance_1_1_s_simulation_options.html#a3bc7bc0acf370c5672ee06848562604d',1,'mass_balance::SSimulationOptions']]],
+  ['feed_5fdestination_3',['feed_destination',['../structcircuit__vector_1_1_circuit_spec.html#af8d8a3ca8e9fc1f70e99d7dd34978332',1,'circuit_vector::CircuitSpec']]],
+  ['feed_5fgormanium_5fkg_5fs_4',['feed_gormanium_kg_s',['../structcli_1_1_economic_overrides.html#ae32d14da6ab10b7e6a6683e82d8b2207',1,'cli::EconomicOverrides']]],
+  ['feed_5fpalusznium_5fkg_5fs_5',['feed_palusznium_kg_s',['../structcli_1_1_economic_overrides.html#a96b48e2d7a027e883df7a924b4bfdd87',1,'cli::EconomicOverrides']]],
+  ['feed_5fwaste_5fkg_5fs_6',['feed_waste_kg_s',['../structcli_1_1_economic_overrides.html#a28d0c03a6180faaba675daf4e72aba84',1,'cli::EconomicOverrides']]],
+  ['final_5ftemperature_7',['final_temperature',['../structcli_1_1_sa_overrides.html#a3379db45b5a00a75d52af7443d2e2d23',1,'cli::SaOverrides::final_temperature'],['../struct_s_a___parameters.html#a923e1a5b0115b702fd6318f9fca3a785',1,'SA_Parameters::final_temperature']]],
+  ['finalise_5frngs_8',['finalise_rngs',['../_p_r_n_g_8h.html#adda680d8f98ba8c9b03486c2bbd4351c',1,'finalise_rngs():&#160;PRNG.cpp'],['../_p_r_n_g_8cpp.html#adda680d8f98ba8c9b03486c2bbd4351c',1,'finalise_rngs():&#160;PRNG.cpp']]],
+  ['fitnessfunction_9',['FitnessFunction',['../_required_functions_8h.html#a20b8491ebbb8e8ce55d1014bd556caad',1,'RequiredFunctions.h']]],
+  ['fixed_10',['Fixed',['../namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656a4457d440870ad6d42bab9082d9bf9b61',1,'cli']]],
+  ['fixed_5fprefix_11',['fixed_prefix',['../structcli_1_1_circuit_inputs.html#a37edd2bb2703973da7530511450c816c',1,'cli::CircuitInputs']]]
 ];

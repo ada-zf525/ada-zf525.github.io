@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['run_20tests_0',['Run tests',['../index.html#autotoc_md6',1,'']]],
-  ['run_20the_20mass_20balance_20benchmark_1',['Run the mass-balance benchmark',['../index.html#autotoc_md9',1,'']]],
-  ['rush_2',['Palusznium Rush',['../index.html',1,'']]]
+  ['layout_0',['Repository Layout',['../index.html#autotoc_md8',1,'']]],
+  ['line_20interface_1',['Command-Line Interface',['../index.html#autotoc_md10',1,'']]]
 ];

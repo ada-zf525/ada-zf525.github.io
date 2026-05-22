@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['valid_5fshape_0',['valid_shape',['../structmass__balance_1_1_s_simulation_result.html#a8b4c283419841365f3d6010f5870f669',1,'mass_balance::SSimulationResult']]],
-  ['value_5fper_5fs_1',['value_per_s',['../structmass__balance_1_1_s_simulation_result.html#a251bcc90d2e764a57bbd75afee06a97b',1,'mass_balance::SSimulationResult']]],
+  ['valid_5fshape_0',['valid_shape',['../struct_s_convergence_validity_result.html#aa460e7bc697d5866732801280b09b76f',1,'SConvergenceValidityResult::valid_shape'],['../structmass__balance_1_1_s_simulation_result.html#a8b4c283419841365f3d6010f5870f669',1,'mass_balance::SSimulationResult::valid_shape']]],
+  ['value_5fper_5fs_1',['value_per_s',['../struct_s_convergence_validity_result.html#a56da99d39f9b4d101a3e66c82d278cc3',1,'SConvergenceValidityResult::value_per_s'],['../structmass__balance_1_1_s_simulation_result.html#a251bcc90d2e764a57bbd75afee06a97b',1,'mass_balance::SSimulationResult::value_per_s']]],
   ['vector_5fcrossover_2',['vector_crossover',['../struct_g_a___functions.html#af0e29cec480e103df7672b89c2d6dac4',1,'GA_Functions']]],
   ['vector_5fextent_3',['vector_extent',['../struct_g_a___functions.html#ae83593101f239c429a6c2ca00e268ea1',1,'GA_Functions']]],
   ['vector_5ffile_4',['vector_file',['../structcli_1_1_circuit_inputs.html#a549801d5dc9b333070f9a5971f3627e2',1,'cli::CircuitInputs']]],

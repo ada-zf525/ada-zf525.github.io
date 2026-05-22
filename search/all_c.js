@@ -1,10 +1,21 @@
 var searchData=
 [
-  ['n_5finputs_0',['n_inputs',['../structcircuit__vector_1_1_circuit_spec.html#a02f03fb83bb40122256f88bb66d572ce',1,'circuit_vector::CircuitSpec']]],
-  ['n_5foutputs_1',['n_outputs',['../class_c_unit.html#af69748af8665e6b6fdce051e16acd284',1,'CUnit']]],
-  ['n_5fproduct_5fstreams_2',['n_product_streams',['../structcircuit__vector_1_1_circuit_spec.html#a50ca52e734b3d572f83f925f64cfeece',1,'circuit_vector::CircuitSpec']]],
-  ['n_5funits_3',['n_units',['../structcircuit__vector_1_1_circuit_spec.html#a1edd777c9d92b1e9ceb082157b3e97ab',1,'circuit_vector::CircuitSpec']]],
-  ['name_4',['name',['../struct_vector_validity_case.html#abb52b71d5a2f72f9bd65666332e779a6',1,'VectorValidityCase::name'],['../struct_graph_validity_case.html#ae0284bd880c2fcdff7646af2ea1dcd80',1,'GraphValidityCase::name']]],
-  ['node_5fdegrees_5',['node_degrees',['../struct_graph_validity_case.html#ac7bcaf34e1ac5b852b4026535463c708',1,'GraphValidityCase']]],
-  ['none_6',['None',['../namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656a6adf97f83acf6453d4a6a4b1070f3754',1,'cli']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['make_5ffull_5fvector_2',['make_full_vector',['../_genetic___algorithm_8h.html#a90d644e2472adc3c15db48ae0988492c',1,'make_full_vector(std::span&lt; const int &gt; fixed_prefix, std::span&lt; const int &gt; variable_values):&#160;Genetic_Algorithm.cpp'],['../_genetic___algorithm_8cpp.html#a90d644e2472adc3c15db48ae0988492c',1,'make_full_vector(std::span&lt; const int &gt; fixed_prefix, std::span&lt; const int &gt; variable_values):&#160;Genetic_Algorithm.cpp']]],
+  ['mark_3',['mark',['../class_c_unit.html#a18aec3c4d21ec8fbf30d4f5f81ff2412',1,'CUnit']]],
+  ['mass_20balance_20simulator_3a_4',['Mass-Balance Simulator:',['../index.html#autotoc_md2',1,'']]],
+  ['mass_5fbalance_5',['mass_balance',['../namespacemass__balance.html',1,'']]],
+  ['mass_5fresidual_5fkg_5fper_5fs_6',['mass_residual_kg_per_s',['../struct_s_convergence_validity_result.html#a4e7f2563f64bfa2081a76cf01dc7018b',1,'SConvergenceValidityResult::mass_residual_kg_per_s'],['../structmass__balance_1_1_s_simulation_result.html#ae192ed3fbc6b5361f78bb0d037ff1f94',1,'mass_balance::SSimulationResult::mass_residual_kg_per_s']]],
+  ['mass_5fresidual_5ftolerance_7',['mass_residual_tolerance',['../struct_s_convergence_validity_result.html#a611244c577b81c82868488d114488ce2',1,'SConvergenceValidityResult']]],
+  ['max_5fiterations_8',['max_iterations',['../structcli_1_1_ga_overrides.html#a1e68fcd83f24d7c14d37a1057db54106',1,'cli::GaOverrides::max_iterations'],['../structcli_1_1_sa_overrides.html#a17e685b52b8de77b4655b3a043dff9a4',1,'cli::SaOverrides::max_iterations'],['../structmass__balance_1_1_s_simulation_options.html#a7271a240d19434eec7217019a1e4995b',1,'mass_balance::SSimulationOptions::max_iterations'],['../struct_algorithm___parameters.html#a8e9974e71ba755a9eae4819747908d23',1,'Algorithm_Parameters::max_iterations'],['../struct_s_a___parameters.html#a5edfa2920c92731aa4dae6831a5790cd',1,'SA_Parameters::max_iterations']]],
+  ['max_5fmutations_9',['max_mutations',['../structcli_1_1_ga_overrides.html#a4a99e44fec420bf625f1b65e5f290224',1,'cli::GaOverrides::max_mutations'],['../structcli_1_1_sa_overrides.html#a67c30680cff2d5671776fafd261365a9',1,'cli::SaOverrides::max_mutations'],['../struct_algorithm___parameters.html#af9b0ff5287b88295d26f4ea51884d3e4',1,'Algorithm_Parameters::max_mutations'],['../struct_s_a___parameters.html#a83050a9a9bb77781e650bf307d075fe8',1,'SA_Parameters::max_mutations']]],
+  ['max_5frelative_5fchange_10',['max_relative_change',['../struct_s_convergence_validity_result.html#a618f20d987cca0f805585d9f76a7457e',1,'SConvergenceValidityResult::max_relative_change'],['../structmass__balance_1_1_s_simulation_result.html#a56afa24f510961b9531c891a7f51b1f5',1,'mass_balance::SSimulationResult::max_relative_change']]],
+  ['max_5fstagnation_11',['max_stagnation',['../structcli_1_1_sa_overrides.html#a2e5317d677945c856202571f81964e66',1,'cli::SaOverrides::max_stagnation'],['../struct_algorithm___parameters.html#a0c2d7955db5021bf07cd92122019d173',1,'Algorithm_Parameters::max_stagnation'],['../struct_s_a___parameters.html#a819ecf1ece6478769f016aed40d35b29',1,'SA_Parameters::max_stagnation']]],
+  ['method_12',['method',['../structcli_1_1_cli_options.html#a69a411d75ecdd95fb875be98f9691303',1,'cli::CliOptions']]],
+  ['min_5fsolid_5fvolumetric_5fflow_5fm3_5fper_5fs_13',['min_solid_volumetric_flow_m3_per_s',['../structmass__balance_1_1_s_simulation_options.html#a54003c33f4e0badd732446b20fa4b16f',1,'mass_balance::SSimulationOptions']]],
+  ['mode_14',['Mode',['../namespacecli.html#a01859dd944bdbe279e309627e6adbeef',1,'cli']]],
+  ['mode_15',['mode',['../structcli_1_1_cli_options.html#a262c0c19f777690a46a80cd9a5806574',1,'cli::CliOptions']]],
+  ['mutate_5fcircuitvector_16',['mutate_circuitvector',['../_required_functions_8h.html#a5819ebbd76181422ec72112aa8b4e4c2',1,'RequiredFunctions.h']]],
+  ['mutation_5fprobability_17',['mutation_probability',['../structcli_1_1_ga_overrides.html#a729f32723bd2d635c0e129ee9524c8d8',1,'cli::GaOverrides::mutation_probability'],['../struct_algorithm___parameters.html#a8da94779c1625ec83e764fc6d907e2e9',1,'Algorithm_Parameters::mutation_probability']]]
 ];

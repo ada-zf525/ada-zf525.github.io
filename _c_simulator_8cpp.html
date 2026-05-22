@@ -121,11 +121,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_c_simulator_8
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_c_economic_model_8h_source.html">CEconomicModel.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_circuit_graph_converter_8h_source.html">CircuitGraphConverter.h</a>&quot;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstddef&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
 <code>#include &lt;span&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div>
@@ -161,13 +163,15 @@ Functions</h2></td></tr>
 <p>Temporary graph overload retained for existing scaffold/tests. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>ESE graph representation. </td></tr>
+    <tr><td class="paramname">graph</td><td><a class="el" href="namespace_e_s_e.html">ESE</a> graph representation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Placeholder performance until the graph-to-vector path is finalised. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00479">479</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00469">469</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_c_simulator_8cpp_source.html#l00463">circuit_performance()</a>, <a class="el" href="_c_simulator_8h_source.html#l00132">mass_balance::SSimulationOptions::failure_fitness</a>, and <a class="el" href="_circuit_graph_converter_8cpp_source.html#l00083">circuit_graph::graph_to_circuit_vector()</a>.</p>
 
 </div>
 </div>
@@ -195,11 +199,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Economic value in pounds per second, or a large negative penalty for malformed/non-convergent circuits. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00473">473</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00463">463</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_c_simulator_8cpp_source.html#l00462">CSimulator::EvaluatePerformance()</a>.</p>
+<p class="reference">References <a class="el" href="_c_simulator_8cpp_source.html#l00452">CSimulator::EvaluatePerformance()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00281">cli::EvaluateExecutor::Execute()</a>, and <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_c_simulator_8cpp_source.html#l00469">circuit_performance()</a>.</p>
 
 </div>
 </div>

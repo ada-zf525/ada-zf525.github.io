@@ -5,6 +5,9 @@ var structcli_1_1_cli_options =
     [ "config_file", "structcli_1_1_cli_options.html#a8a904cbb7188effb297a8476fef30bda", null ],
     [ "economic", "structcli_1_1_cli_options.html#a45c6aa4c3db9d5b123a4675aabe84f7a", null ],
     [ "ga", "structcli_1_1_cli_options.html#aba238630f70a3e89a772d0ad4e22f20d", null ],
+    [ "method", "structcli_1_1_cli_options.html#a69a411d75ecdd95fb875be98f9691303", null ],
     [ "mode", "structcli_1_1_cli_options.html#a262c0c19f777690a46a80cd9a5806574", null ],
-    [ "outputs", "structcli_1_1_cli_options.html#abd9e1ef0815761337320a1a5676381a9", null ]
+    [ "outputs", "structcli_1_1_cli_options.html#abd9e1ef0815761337320a1a5676381a9", null ],
+    [ "sa", "structcli_1_1_cli_options.html#a91447545732580bbc6bdcf75db91cfbd", null ],
+    [ "unit_count", "structcli_1_1_cli_options.html#a919a3f37aa57cdff595fcaa3197e89de", null ]
 ];

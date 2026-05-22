@@ -133,11 +133,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_circuit_valid
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a3b23d8d5c07a7f762b6b5a16a782e1e7" id="r_a3b23d8d5c07a7f762b6b5a16a782e1e7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a3b23d8d5c07a7f762b6b5a16a782e1e7">vector_check_validity</a> (std::span&lt; const int &gt; circuit_span)</td></tr>
+<tr class="memdesc:a3b23d8d5c07a7f762b6b5a16a782e1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit expressed as a flat integer circuit vector.  <br /></td></tr>
 <tr class="memitem:a14b8d306b719e69bfdaa465b37dbb160" id="r_a14b8d306b719e69bfdaa465b37dbb160"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a14b8d306b719e69bfdaa465b37dbb160">graph_check_validity</a> (const ESE::Graph &amp;graph)</td></tr>
+<tr class="memdesc:a14b8d306b719e69bfdaa465b37dbb160"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit expressed as an <code>ESE::Graph</code>.  <br /></td></tr>
 <tr class="memitem:a378dbacbd3d7ec78b668f93cc85280f1" id="r_a378dbacbd3d7ec78b668f93cc85280f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a378dbacbd3d7ec78b668f93cc85280f1">check_validity</a> (std::span&lt; const int &gt; circuit_span)</td></tr>
-<tr class="memdesc:a378dbacbd3d7ec78b668f93cc85280f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic vector validity check.  <br /></td></tr>
+<tr class="memdesc:a378dbacbd3d7ec78b668f93cc85280f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit vector (overload for flat integer span).  <br /></td></tr>
 <tr class="memitem:a04bd8112cfc5d2e04893d2c7e2b0a564" id="r_a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a04bd8112cfc5d2e04893d2c7e2b0a564">check_validity</a> (const ESE::Graph &amp;graph)</td></tr>
-<tr class="memdesc:a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary graph validity overload retained for existing scaffold/tests.  <br /></td></tr>
+<tr class="memdesc:a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit graph (overload for <code>ESE::Graph</code>).  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a04bd8112cfc5d2e04893d2c7e2b0a564" name="a04bd8112cfc5d2e04893d2c7e2b0a564"></a>
@@ -155,18 +157,28 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Temporary graph validity overload retained for existing scaffold/tests. </p>
+<p>Validates a circuit graph (overload for <code>ESE::Graph</code>). </p>
+<p>Check whether an ESEGraph circuit representation is structurally valid.</p>
+<p>Convenience overload dispatching to <code><a class="el" href="#a14b8d306b719e69bfdaa465b37dbb160" title="Validates a circuit expressed as an ESE::Graph.">graph_check_validity()</a></code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>ESE graph representation. </td></tr>
+    <tr><td class="paramname">graph</td><td>The graph representation of the circuit to validate. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true for now. Replace when graph validity is implemented. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if valid, <code>false</code> otherwise.</dd></dl>
+<p>Validates a circuit graph (overload for <code>ESE::Graph</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td><a class="el" href="namespace_e_s_e.html">ESE</a> graph representation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the graph passes the same topology checks as the vector-based validity checker; false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00162">162</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00237">237</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00130">graph_check_validity()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00187">graph_check_validity()</a>.</p>
 
 </div>
 </div>
@@ -185,7 +197,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Basic vector validity check. </p>
+<p>Validates a circuit vector (overload for flat integer span). </p>
+<p>Check whether an encoded circuit vector is structurally valid.</p>
+<p>Convenience overload dispatching to <code><a class="el" href="#a3b23d8d5c07a7f762b6b5a16a782e1e7" title="Validates a circuit expressed as a flat integer circuit vector.">vector_check_validity()</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_span</td><td>The flat integer circuit vector to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if valid, <code>false</code> otherwise.</dd></dl>
+<p>Validates a circuit vector (overload for flat integer span).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">circuit_span</td><td>Full encoded circuit vector. </td></tr>
@@ -194,11 +216,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the vector is structurally well-formed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00157">157</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00223">223</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00110">vector_check_validity()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00157">vector_check_validity()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>, <a class="el" href="_command_executor_8cpp_source.html#l00305">cli::ValidateExecutor::Execute()</a>, <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00065">run_graph_validity_cases()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00030">run_vector_validity_cases()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00375">cli::OptimiseExecutor::Execute()</a>, <a class="el" href="_command_executor_8cpp_source.html#l00496">cli::ValidateExecutor::Execute()</a>, <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00065">run_graph_validity_cases()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00030">run_vector_validity_cases()</a>.</p>
 
 </div>
 </div>
@@ -217,9 +239,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00130">130</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p>Validates a circuit expressed as an <code>ESE::Graph</code>. </p>
+<p>Extracts feed destinations from the graph's root nodes and builds a list from its dynamic nodes, then links and delegates to <code>graph_has_valid_topology()</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The graph representation of the circuit to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the graph satisfies all topology constraints, <code>false</code> otherwise. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="_c_circuit_8cpp_source.html#l00009">check_validity()</a>, <a class="el" href="_circuit_validity_8cpp_source.html#l00162">check_validity()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00065">run_graph_validity_cases()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00187">187</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_c_circuit_8cpp_source.html#l00022">check_validity()</a>, <a class="el" href="_circuit_validity_8cpp_source.html#l00237">check_validity()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00065">run_graph_validity_cases()</a>.</p>
 
 </div>
 </div>
@@ -238,11 +270,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00110">110</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p>Validates a circuit expressed as a flat integer circuit vector. </p>
+<p>Parses <code class="param">circuit_span</code> into a <code>CircuitSpec</code> using <code><a class="el" href="namespacecircuit__vector.html#aa675e524e41943dfcd6a97d7bbfcbded" title="Parses a flat integer circuit vector into a structured ParseResult.">circuit_vector::parse_circuit_vector()</a></code> and then links the topology validation to the internal <code>graph_has_valid_topology()</code> function. Returns <code>false</code> if the vector cannot be parsed.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_span</td><td>The flat integer encoding of the circuit to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the circuit vector is well formed and considered topologically valid, <code>false</code> otherwise. </dd></dl>
 
-<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00055">circuit_vector::parse_circuit_vector()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00157">157</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_circuit_validity_8cpp_source.html#l00157">check_validity()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00030">run_vector_validity_cases()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00117">circuit_vector::parse_circuit_vector()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_circuit_validity_8cpp_source.html#l00223">check_validity()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00030">run_vector_validity_cases()</a>.</p>
 
 </div>
 </div>

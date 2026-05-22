@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_c_simulator_8
 <div class="textblock"><code>#include &lt;span&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="_c_economic_model_8h_source.html">CEconomicModel.h</a>&quot;</code><br />
 <code>#include &quot;ESEGraph.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_g_a_typedefs_8h_source.html">GATypedefs.h</a>&quot;</code><br />
 </div>
@@ -137,7 +138,7 @@ Classes</h2></td></tr>
 <tr class="memitem:mass_5Fbalance_3A_3ASProductStreams" id="r_mass_5Fbalance_3A_3ASProductStreams"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structmass__balance_1_1_s_product_streams.html">mass_balance::SProductStreams</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Final outlet streams from a circuit simulation.  <a href="structmass__balance_1_1_s_product_streams.html#details">More...</a><br /></td></tr>
 <tr class="memitem:mass_5Fbalance_3A_3ASSimulationOptions" id="r_mass_5Fbalance_3A_3ASSimulationOptions"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structmass__balance_1_1_s_simulation_options.html">mass_balance::SSimulationOptions</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numerical settings for the fixed-point mass-balance solver.  <a href="structmass__balance_1_1_s_simulation_options.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Numerical and physical options for the circuit mass-balance simulation.  <a href="structmass__balance_1_1_s_simulation_options.html#details">More...</a><br /></td></tr>
 <tr class="memitem:mass_5Fbalance_3A_3ASSimulationResult" id="r_mass_5Fbalance_3A_3ASSimulationResult"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structmass__balance_1_1_s_simulation_result.html">mass_balance::SSimulationResult</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Diagnostic result returned by CSimulator::Simulate(...).  <a href="structmass__balance_1_1_s_simulation_result.html#details">More...</a><br /></td></tr>
 <tr class="memitem:CSimulator" id="r_CSimulator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="class_c_simulator.html">CSimulator</a></td></tr>
@@ -154,9 +155,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae7d1c5a7e34f0b979c9f421d38d9cf08" id="r_ae7d1c5a7e34f0b979c9f421d38d9cf08"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae7d1c5a7e34f0b979c9f421d38d9cf08">circuit_performance</a> (const ESE::Graph &amp;graph)</td></tr>
 <tr class="memdesc:ae7d1c5a7e34f0b979c9f421d38d9cf08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary graph overload retained for existing scaffold/tests.  <br /></td></tr>
 <tr class="memitem:a378dbacbd3d7ec78b668f93cc85280f1" id="r_a378dbacbd3d7ec78b668f93cc85280f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a378dbacbd3d7ec78b668f93cc85280f1">check_validity</a> (std::span&lt; const int &gt; circuit_span)</td></tr>
-<tr class="memdesc:a378dbacbd3d7ec78b668f93cc85280f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic vector validity check.  <br /></td></tr>
+<tr class="memdesc:a378dbacbd3d7ec78b668f93cc85280f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether an encoded circuit vector is structurally valid.  <br /></td></tr>
 <tr class="memitem:a04bd8112cfc5d2e04893d2c7e2b0a564" id="r_a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a04bd8112cfc5d2e04893d2c7e2b0a564">check_validity</a> (const ESE::Graph &amp;graph)</td></tr>
-<tr class="memdesc:a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary graph validity overload retained for existing scaffold/tests.  <br /></td></tr>
+<tr class="memdesc:a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether an ESEGraph circuit representation is structurally valid.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -197,18 +198,28 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Temporary graph validity overload retained for existing scaffold/tests. </p>
+<p>Check whether an ESEGraph circuit representation is structurally valid. </p>
+<p>Validates a circuit graph (overload for <code>ESE::Graph</code>).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>ESE graph representation. </td></tr>
+    <tr><td class="paramname">graph</td><td><a class="el" href="namespace_e_s_e.html">ESE</a> graph representation. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true for now. Replace when graph validity is implemented. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the graph passes the same topology checks as the vector-based validity checker; false otherwise.</dd></dl>
+<p>Check whether an ESEGraph circuit representation is structurally valid.</p>
+<p>Convenience overload dispatching to <code><a class="el" href="_circuit_validity_8h.html#a14b8d306b719e69bfdaa465b37dbb160" title="Validates a circuit expressed as an ESE::Graph.">graph_check_validity()</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The graph representation of the circuit to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if valid, <code>false</code> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00162">162</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00237">237</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00130">graph_check_validity()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00187">graph_check_validity()</a>.</p>
 
 </div>
 </div>
@@ -227,20 +238,30 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Basic vector validity check. </p>
+<p>Check whether an encoded circuit vector is structurally valid. </p>
+<p>Validates a circuit vector (overload for flat integer span).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">circuit_span</td><td>Full encoded circuit vector. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the vector is structurally well-formed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the vector is structurally well-formed.</dd></dl>
+<p>Check whether an encoded circuit vector is structurally valid.</p>
+<p>Convenience overload dispatching to <code><a class="el" href="_circuit_validity_8h.html#a3b23d8d5c07a7f762b6b5a16a782e1e7" title="Validates a circuit expressed as a flat integer circuit vector.">vector_check_validity()</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_span</td><td>The flat integer circuit vector to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if valid, <code>false</code> otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00157">157</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00223">223</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00110">vector_check_validity()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00157">vector_check_validity()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>, <a class="el" href="_command_executor_8cpp_source.html#l00305">cli::ValidateExecutor::Execute()</a>, <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00065">run_graph_validity_cases()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00030">run_vector_validity_cases()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00375">cli::OptimiseExecutor::Execute()</a>, <a class="el" href="_command_executor_8cpp_source.html#l00496">cli::ValidateExecutor::Execute()</a>, <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00065">run_graph_validity_cases()</a>, and <a class="el" href="_circuit_validity_test_framework_8h_source.html#l00030">run_vector_validity_cases()</a>.</p>
 
 </div>
 </div>
@@ -262,13 +283,15 @@ Variables</h2></td></tr>
 <p>Temporary graph overload retained for existing scaffold/tests. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>ESE graph representation. </td></tr>
+    <tr><td class="paramname">graph</td><td><a class="el" href="namespace_e_s_e.html">ESE</a> graph representation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Placeholder performance until the graph-to-vector path is finalised. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00479">479</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00469">469</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_c_simulator_8cpp_source.html#l00463">circuit_performance()</a>, <a class="el" href="_c_simulator_8h_source.html#l00132">mass_balance::SSimulationOptions::failure_fitness</a>, and <a class="el" href="_circuit_graph_converter_8cpp_source.html#l00083">circuit_graph::graph_to_circuit_vector()</a>.</p>
 
 </div>
 </div>
@@ -296,11 +319,9 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Economic value in pounds per second, or a large negative penalty for malformed/non-convergent circuits. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00473">473</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00463">463</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_c_simulator_8cpp_source.html#l00462">CSimulator::EvaluatePerformance()</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00281">cli::EvaluateExecutor::Execute()</a>, and <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>.</p>
+<p class="reference">References <a class="el" href="_c_simulator_8cpp_source.html#l00452">CSimulator::EvaluatePerformance()</a>.</p>
 
 </div>
 </div>

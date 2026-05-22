@@ -119,15 +119,42 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_visualization
   <div class="headertitle"><div class="title">Visualization.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;CSRGraph.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_visualization_8h_source.html">Visualization.h</a>&quot;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;span&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;CSRGraph.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_circuit_vector_parser_8h_source.html">CircuitVectorParser.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_required_functions_8h_source.html">RequiredFunctions.h</a>&quot;</code><br />
 </div>
 <p><a href="_visualization_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:visualization" id="r_visualization"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacevisualization.html">visualization</a></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a491305472b926880f08fbb042d8e903c" id="r_a491305472b926880f08fbb042d8e903c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a491305472b926880f08fbb042d8e903c">plot_span</a> (std::span&lt; const int &gt; const values, const char *filename)</td></tr>
+<tr class="memitem:a5f3decbe3bc09db5c63ef2b480875bbb" id="r_a5f3decbe3bc09db5c63ef2b480875bbb"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacevisualization.html#a5f3decbe3bc09db5c63ef2b480875bbb">visualization::graphviz_output_format</a> (const char *filename)</td></tr>
+<tr class="memdesc:a5f3decbe3bc09db5c63ef2b480875bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Graphviz output format string provided by <code class="param">filename's</code> extension.  <br /></td></tr>
+<tr class="memitem:af91d8719a03c36335217b3c357ff89e1" id="r_af91d8719a03c36335217b3c357ff89e1"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacevisualization.html#af91d8719a03c36335217b3c357ff89e1">visualization::build_circuit_dot</a> (std::span&lt; const int &gt; circuit_vector)</td></tr>
+<tr class="memdesc:af91d8719a03c36335217b3c357ff89e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a Graphviz dot representation of a circuit vector.  <br /></td></tr>
+<tr class="memitem:aaaf33a33ecbf95f16ca33195d3500eaa" id="r_aaaf33a33ecbf95f16ca33195d3500eaa"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacevisualization.html#aaaf33a33ecbf95f16ca33195d3500eaa">visualization::build_circuit_dot</a> (std::span&lt; const int &gt; circuit_vector, const <a class="el" href="structmass__balance_1_1_s_simulation_result.html">mass_balance::SSimulationResult</a> &amp;result)</td></tr>
+<tr class="memdesc:aaaf33a33ecbf95f16ca33195d3500eaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds an annotated Graphviz dot representation of a circuit vector together with its simulation result.  <br /></td></tr>
+<tr class="memitem:ae3a5a3a46584cb543a0cc6a3e991e8ac" id="r_ae3a5a3a46584cb543a0cc6a3e991e8ac"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="namespacevisualization.html#ae3a5a3a46584cb543a0cc6a3e991e8ac">visualization::build_graph_dot</a> (const ESE::Graph &amp;graph)</td></tr>
+<tr class="memdesc:ae3a5a3a46584cb543a0cc6a3e991e8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds a Graphviz dot representation of a generic <code>ESE::Graph</code>.  <br /></td></tr>
+<tr class="memitem:a7b4c3c655f711327ece9f0c77e0234ff" id="r_a7b4c3c655f711327ece9f0c77e0234ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b4c3c655f711327ece9f0c77e0234ff">plot_span</a> (std::span&lt; const int &gt; values, const char *filename)</td></tr>
+<tr class="memdesc:a7b4c3c655f711327ece9f0c77e0234ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a circuit-vector diagram to <code class="param">filename</code>.  <br /></td></tr>
 <tr class="memitem:ac0b4f7f98168f25ee7245223c039cc8b" id="r_ac0b4f7f98168f25ee7245223c039cc8b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0b4f7f98168f25ee7245223c039cc8b">plot_graph</a> (const ESE::Graph &amp;graph, const char *filename)</td></tr>
+<tr class="memdesc:ac0b4f7f98168f25ee7245223c039cc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a <code>ESE::Graph</code> diagram to <code class="param">filename</code>.  <br /></td></tr>
+<tr class="memitem:ab9190efa6a4ecf2ba482541d30ee7d44" id="r_ab9190efa6a4ecf2ba482541d30ee7d44"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="namespacevisualization.html#ab9190efa6a4ecf2ba482541d30ee7d44">visualization::plot_circuit_diagnostic</a> (std::span&lt; const int &gt; circuit_vector, const char *filename)</td></tr>
+<tr class="memdesc:ab9190efa6a4ecf2ba482541d30ee7d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulates <code class="param"><a class="el" href="namespacecircuit__vector.html">circuit_vector</a></code> and writes an annotated diagram to <code class="param">filename</code>.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ac0b4f7f98168f25ee7245223c039cc8b" name="ac0b4f7f98168f25ee7245223c039cc8b"></a>
@@ -149,12 +176,24 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00006">6</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+<p>Writes a <code>ESE::Graph</code> diagram to <code class="param">filename</code>. </p>
+<p>Generates DOT source via <code><a class="el" href="namespacevisualization.html#ae3a5a3a46584cb543a0cc6a3e991e8ac" title="Builds a Graphviz dot representation of a generic ESE::Graph.">visualization::build_graph_dot()</a></code> and persists it using <code>write_or_render()</code>, which will request Graphviz to produce an image when the extension is recognised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>Graph to visualise. </td></tr>
+    <tr><td class="paramname">filename</td><td>Destination file path (<code>nullptr</code> is a no-op). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00428">428</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_visualization_8cpp_source.html#l00308">visualization::build_graph_dot()</a>.</p>
 
 </div>
 </div>
-<a id="a491305472b926880f08fbb042d8e903c" name="a491305472b926880f08fbb042d8e903c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a491305472b926880f08fbb042d8e903c">&#9670;&#160;</a></span>plot_span()</h2>
+<a id="a7b4c3c655f711327ece9f0c77e0234ff" name="a7b4c3c655f711327ece9f0c77e0234ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b4c3c655f711327ece9f0c77e0234ff">&#9670;&#160;</a></span>plot_span()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +201,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void plot_span </td>
           <td>(</td>
-          <td class="paramtype">std::span&lt; const int &gt; const</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
+          <td class="paramtype">std::span&lt; const int &gt;</td>          <td class="paramname"><span class="paramname"><em>values</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -172,9 +211,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00004">4</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+<p>Writes a circuit-vector diagram to <code class="param">filename</code>. </p>
+<p>Generates DOT source via <code><a class="el" href="namespacevisualization.html#af91d8719a03c36335217b3c357ff89e1" title="Builds a Graphviz dot representation of a circuit vector.">visualization::build_circuit_dot()</a></code> and persists it using <code>write_or_render()</code>, which will request Graphviz to produce an image when the extension is recognised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The flat integer circuit vector to visualise. </td></tr>
+    <tr><td class="paramname">filename</td><td>Destination file path (<code>nullptr</code> is a no-op). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>, and <a class="el" href="_command_executor_8cpp_source.html#l00328">cli::VisualiseExecutor::Execute()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00413">413</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_visualization_8cpp_source.html#l00129">visualization::build_circuit_dot()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00375">cli::OptimiseExecutor::Execute()</a>.</p>
 
 </div>
 </div>

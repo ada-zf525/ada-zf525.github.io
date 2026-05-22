@@ -125,7 +125,9 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_c_unit.h
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af94af33f7e89ad04a27e77479f78eb4a" id="r_af94af33f7e89ad04a27e77479f78eb4a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#af94af33f7e89ad04a27e77479f78eb4a">CUnit</a> ()</td></tr>
+<tr class="memdesc:af94af33f7e89ad04a27e77479f78eb4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_c_unit.html">CUnit</a> and allocates its output destination array.  <br /></td></tr>
 <tr class="memitem:a2b326b3671dc94ff4f85da768a937b8d" id="r_a2b326b3671dc94ff4f85da768a937b8d"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a2b326b3671dc94ff4f85da768a937b8d">~CUnit</a> ()</td></tr>
+<tr class="memdesc:a2b326b3671dc94ff4f85da768a937b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees memory by destroying the <a class="el" href="class_c_unit.html">CUnit</a> and releasing the output destination array.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -153,7 +155,10 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_c_unit_8cpp_source.html#l00003">3</a> of file <a class="el" href="_c_unit_8cpp_source.html">CUnit.cpp</a>.</p>
+<p>Constructs a <a class="el" href="class_c_unit.html">CUnit</a> and allocates its output destination array. </p>
+<p>Heap allocates an array of <code>n_outputs</code> to hold the destination indices, representing unit indices, for each of this unit's output streams. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_unit_8cpp_source.html#l00009">9</a> of file <a class="el" href="_c_unit_8cpp_source.html">CUnit.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_c_unit_8h_source.html#l00011">n_outputs</a>, and <a class="el" href="_c_unit_8h_source.html#l00016">output</a>.</p>
 
@@ -174,7 +179,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_c_unit_8cpp_source.html#l00005">5</a> of file <a class="el" href="_c_unit_8cpp_source.html">CUnit.cpp</a>.</p>
+<p>Frees memory by destroying the <a class="el" href="class_c_unit.html">CUnit</a> and releasing the output destination array. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_unit_8cpp_source.html#l00015">15</a> of file <a class="el" href="_c_unit_8cpp_source.html">CUnit.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_c_unit_8h_source.html#l00016">output</a>.</p>
 
@@ -211,7 +218,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_c_unit_8h_source.html#l00011">11</a> of file <a class="el" href="_c_unit_8h_source.html">CUnit.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_c_unit_8cpp_source.html#l00003">CUnit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_c_unit_8cpp_source.html#l00009">CUnit()</a>.</p>
 
 </div>
 </div>
@@ -229,7 +236,7 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_c_unit_8h_source.html#l00016">16</a> of file <a class="el" href="_c_unit_8h_source.html">CUnit.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_c_unit_8cpp_source.html#l00003">CUnit()</a>, and <a class="el" href="_c_unit_8cpp_source.html#l00005">~CUnit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_c_unit_8cpp_source.html#l00009">CUnit()</a>, and <a class="el" href="_c_unit_8cpp_source.html#l00015">~CUnit()</a>.</p>
 
 </div>
 </div>

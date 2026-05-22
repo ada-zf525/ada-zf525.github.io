@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['palusznium_20rush_0',['Palusznium Rush',['../index.html',1,'']]]
+  ['interface_0',['Command-Line Interface',['../index.html#autotoc_md10',1,'']]]
 ];

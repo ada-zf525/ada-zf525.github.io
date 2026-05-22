@@ -4,6 +4,8 @@ var _required_functions_8h =
     [ "GA_Functions", "struct_g_a___functions.html", "struct_g_a___functions" ],
     [ "BaseResult&lt; T &gt;", "struct_base_result.html", "struct_base_result" ],
     [ "BaseResult&lt; std::span&lt; int &gt; &gt;", "struct_base_result_3_01std_1_1span_3_01int_01_4_01_4.html", "struct_base_result_3_01std_1_1span_3_01int_01_4_01_4" ],
+    [ "FitnessFunction", "_required_functions_8h.html#a20b8491ebbb8e8ce55d1014bd556caad", null ],
+    [ "ValidityFunction", "_required_functions_8h.html#a2b078fa7432d32764890bf930f41fe01", null ],
     [ "check_validity", "_required_functions_8h.html#a04bd8112cfc5d2e04893d2c7e2b0a564", null ],
     [ "check_validity", "_required_functions_8h.html#a378dbacbd3d7ec78b668f93cc85280f1", null ],
     [ "circuit_performance", "_required_functions_8h.html#ae7d1c5a7e34f0b979c9f421d38d9cf08", null ],
@@ -15,7 +17,7 @@ var _required_functions_8h =
     [ "default_similarity", "_required_functions_8h.html#a0983f05f80e6afc68e30cfc4fd82ba8a", null ],
     [ "generate_circuit_vector", "_required_functions_8h.html#a5ff3ab9070b22ea8b448ca7b37e16d10", null ],
     [ "mutate_circuitvector", "_required_functions_8h.html#a5819ebbd76181422ec72112aa8b4e4c2", null ],
-    [ "optimize_span", "_required_functions_8h.html#a33a5518a123e9c8cbe4f0606ac6baf14", null ],
+    [ "optimize_span", "_required_functions_8h.html#a534a73061fd39ab2d659e32b2c22dae0", null ],
     [ "plot_graph", "_required_functions_8h.html#ac0b4f7f98168f25ee7245223c039cc8b", null ],
     [ "plot_span", "_required_functions_8h.html#a7b4c3c655f711327ece9f0c77e0234ff", null ],
     [ "seed_rngs", "_required_functions_8h.html#ac647fbbbd8ca511f2be5871dfc2c0921", null ]

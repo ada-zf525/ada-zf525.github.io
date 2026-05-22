@@ -132,6 +132,8 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_cli_parser_8h
 Classes</h2></td></tr>
 <tr class="memitem:cli_3A_3AGaOverrides" id="r_cli_3A_3AGaOverrides"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcli_1_1_ga_overrides.html">cli::GaOverrides</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genetic-algorithm tuning parameters supplied through the CLI.  <a href="structcli_1_1_ga_overrides.html#details">More...</a><br /></td></tr>
+<tr class="memitem:cli_3A_3ASaOverrides" id="r_cli_3A_3ASaOverrides"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcli_1_1_sa_overrides.html">cli::SaOverrides</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulated-annealing tuning parameters supplied through the CLI.  <a href="structcli_1_1_sa_overrides.html#details">More...</a><br /></td></tr>
 <tr class="memitem:cli_3A_3AEconomicOverrides" id="r_cli_3A_3AEconomicOverrides"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcli_1_1_economic_overrides.html">cli::EconomicOverrides</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Economic-model overrides supplied through the CLI.  <a href="structcli_1_1_economic_overrides.html#details">More...</a><br /></td></tr>
 <tr class="memitem:cli_3A_3AOutputPaths" id="r_cli_3A_3AOutputPaths"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcli_1_1_output_paths.html">cli::OutputPaths</a></td></tr>
@@ -158,10 +160,14 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a01859dd944bdbe279e309627e6adbeef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation mode requested on the command line.  <a href="namespacecli.html#a01859dd944bdbe279e309627e6adbeef">More...</a><br /></td></tr>
 <tr class="memitem:aceb74be7930f9524e6ccffbfc2fb0656" id="r_aceb74be7930f9524e6ccffbfc2fb0656"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656">cli::CasePreset</a> { <a class="el" href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656a6adf97f83acf6453d4a6a4b1070f3754">cli::None</a>
-, <a class="el" href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656ae44bf5768e6e0c85d5904094f20336c9">cli::Fixed10</a>
-, <a class="el" href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656aabb2b24b4cb00ba9488557d758413834">cli::Swappable8</a>
+, <a class="el" href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656a4457d440870ad6d42bab9082d9bf9b61">cli::Fixed</a>
+, <a class="el" href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656aed0c3d91d14f803ce7606df208aeae0f">cli::Swappable</a>
  }</td></tr>
 <tr class="memdesc:aceb74be7930f9524e6ccffbfc2fb0656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Built-in problem preset selected on the command line.  <a href="namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656">More...</a><br /></td></tr>
+<tr class="memitem:ade808564ad484e615457a20c556b5e69" id="r_ade808564ad484e615457a20c556b5e69"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacecli.html#ade808564ad484e615457a20c556b5e69">cli::OptimisationMethod</a> { <a class="el" href="namespacecli.html#ade808564ad484e615457a20c556b5e69a64568d6794fa41d2e0bcefaaea26692f">cli::GeneticAlgorithm</a>
+, <a class="el" href="namespacecli.html#ade808564ad484e615457a20c556b5e69a9e54e50d057e08825382c09877dede7f">cli::SimulatedAnnealing</a>
+ }</td></tr>
+<tr class="memdesc:ade808564ad484e615457a20c556b5e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimisation algorithm requested for &ndash;mode optimise.  <a href="namespacecli.html#ade808564ad484e615457a20c556b5e69">More...</a><br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Command-line argument types for the Circuit_Optimizer executable. </p>

@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_required_func
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;cstddef&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &lt;random&gt;</code><br />
 <code>#include &lt;span&gt;</code><br />
 <code>#include &quot;<a class="el" href="_circuit_validity_8h_source.html">CircuitValidity.h</a>&quot;</code><br />
@@ -135,6 +136,13 @@ Classes</h2></td></tr>
 <tr class="memitem:BaseResult_3C_20T_20_3E" id="r_BaseResult_3C_20T_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_base_result.html">BaseResult&lt; T &gt;</a></td></tr>
 <tr class="memitem:BaseResult_3C_20std_3A_3Aspan_3C_20int_20_3E_20_3E" id="r_BaseResult_3C_20std_3A_3Aspan_3C_20int_20_3E_20_3E"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_base_result_3_01std_1_1span_3_01int_01_4_01_4.html">BaseResult&lt; std::span&lt; int &gt; &gt;</a></td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a20b8491ebbb8e8ce55d1014bd556caad" id="r_a20b8491ebbb8e8ce55d1014bd556caad"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a20b8491ebbb8e8ce55d1014bd556caad">FitnessFunction</a> = std::function&lt;double(std::span&lt;const int&gt;)&gt;</td></tr>
+<tr class="memdesc:a20b8491ebbb8e8ce55d1014bd556caad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable type used by the GA to evaluate circuit fitness.  <br /></td></tr>
+<tr class="memitem:a2b078fa7432d32764890bf930f41fe01" id="r_a2b078fa7432d32764890bf930f41fe01"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#a2b078fa7432d32764890bf930f41fe01">ValidityFunction</a> = std::function&lt;bool(std::span&lt;const int&gt;)&gt;</td></tr>
+<tr class="memdesc:a2b078fa7432d32764890bf930f41fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callable type used by the GA to check circuit validity.  <br /></td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac647fbbbd8ca511f2be5871dfc2c0921" id="r_ac647fbbbd8ca511f2be5871dfc2c0921"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac647fbbbd8ca511f2be5871dfc2c0921">seed_rngs</a> (unsigned seed)</td></tr>
@@ -142,21 +150,61 @@ Functions</h2></td></tr>
 <tr class="memitem:a1811b672bbfcd284f4cea19ca453fc7a" id="r_a1811b672bbfcd284f4cea19ca453fc7a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1811b672bbfcd284f4cea19ca453fc7a">default_mutator</a> (std::span&lt; const int &gt; fixed_prefix, std::span&lt; int &gt; values, std::size_t max_mutations, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> &amp;rng)</td></tr>
 <tr class="memitem:a567a847ba5b8027bf413389f918ecc56" id="r_a567a847ba5b8027bf413389f918ecc56"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a567a847ba5b8027bf413389f918ecc56">default_crossover</a> (std::span&lt; const int &gt; fixed_prefix, std::span&lt; const int &gt; parent1_values, std::span&lt; const int &gt; parent2_values, std::span&lt; std::span&lt; int &gt; &gt; child_values, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> &amp;rng)</td></tr>
 <tr class="memitem:a0983f05f80e6afc68e30cfc4fd82ba8a" id="r_a0983f05f80e6afc68e30cfc4fd82ba8a"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a0983f05f80e6afc68e30cfc4fd82ba8a">default_similarity</a> (std::span&lt; const int &gt; fixed_prefix, std::span&lt; const int &gt; vec1, std::span&lt; const int &gt; vec2)</td></tr>
-<tr class="memitem:a33a5518a123e9c8cbe4f0606ac6baf14" id="r_a33a5518a123e9c8cbe4f0606ac6baf14"><td class="memItemLeft"><a class="el" href="struct_base_result.html">BaseResult</a>&lt; std::span&lt; int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a33a5518a123e9c8cbe4f0606ac6baf14">optimize_span</a> (std::span&lt; const int &gt; fixed_prefix, double(*performance_function)(const std::span&lt; const int &gt;), bool(*validity_checker)(const std::span&lt; const int &gt;), <a class="el" href="struct_g_a___functions.html">GA_Functions</a> ga_functions)</td></tr>
+<tr class="memitem:a534a73061fd39ab2d659e32b2c22dae0" id="r_a534a73061fd39ab2d659e32b2c22dae0"><td class="memItemLeft"><a class="el" href="struct_base_result.html">BaseResult</a>&lt; std::span&lt; int &gt; &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a534a73061fd39ab2d659e32b2c22dae0">optimize_span</a> (std::span&lt; const int &gt; fixed_prefix, const <a class="el" href="#a20b8491ebbb8e8ce55d1014bd556caad">FitnessFunction</a> &amp;performance_function, const <a class="el" href="#a2b078fa7432d32764890bf930f41fe01">ValidityFunction</a> &amp;validity_checker, <a class="el" href="struct_g_a___functions.html">GA_Functions</a> ga_functions)</td></tr>
 <tr class="memitem:add6a19d7fb0027c038d33108de4b81ba" id="r_add6a19d7fb0027c038d33108de4b81ba"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#add6a19d7fb0027c038d33108de4b81ba">circuit_performance</a> (std::span&lt; const int &gt; circuit_span)</td></tr>
 <tr class="memdesc:add6a19d7fb0027c038d33108de4b81ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required GA-facing mass-balance performance function.  <br /></td></tr>
 <tr class="memitem:ae7d1c5a7e34f0b979c9f421d38d9cf08" id="r_ae7d1c5a7e34f0b979c9f421d38d9cf08"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae7d1c5a7e34f0b979c9f421d38d9cf08">circuit_performance</a> (const ESE::Graph &amp;graph)</td></tr>
 <tr class="memdesc:ae7d1c5a7e34f0b979c9f421d38d9cf08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary graph overload retained for existing scaffold/tests.  <br /></td></tr>
 <tr class="memitem:a378dbacbd3d7ec78b668f93cc85280f1" id="r_a378dbacbd3d7ec78b668f93cc85280f1"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a378dbacbd3d7ec78b668f93cc85280f1">check_validity</a> (std::span&lt; const int &gt; circuit_span)</td></tr>
-<tr class="memdesc:a378dbacbd3d7ec78b668f93cc85280f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basic vector validity check.  <br /></td></tr>
+<tr class="memdesc:a378dbacbd3d7ec78b668f93cc85280f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit vector (overload for flat integer span).  <br /></td></tr>
 <tr class="memitem:a04bd8112cfc5d2e04893d2c7e2b0a564" id="r_a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a04bd8112cfc5d2e04893d2c7e2b0a564">check_validity</a> (const ESE::Graph &amp;graph)</td></tr>
-<tr class="memdesc:a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary graph validity overload retained for existing scaffold/tests.  <br /></td></tr>
+<tr class="memdesc:a04bd8112cfc5d2e04893d2c7e2b0a564"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit graph (overload for <code>ESE::Graph</code>).  <br /></td></tr>
 <tr class="memitem:a5ff3ab9070b22ea8b448ca7b37e16d10" id="r_a5ff3ab9070b22ea8b448ca7b37e16d10"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5ff3ab9070b22ea8b448ca7b37e16d10">generate_circuit_vector</a> (std::span&lt; const int &gt; fixed_values, std::span&lt; int &gt; random_values, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> &amp;rng)</td></tr>
 <tr class="memitem:a5819ebbd76181422ec72112aa8b4e4c2" id="r_a5819ebbd76181422ec72112aa8b4e4c2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5819ebbd76181422ec72112aa8b4e4c2">mutate_circuitvector</a> (std::span&lt; const int &gt; fixed_values, std::span&lt; int &gt; mutable_values, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> &amp;rng)</td></tr>
 <tr class="memitem:af1901cba68d936646aa189ee07543940" id="r_af1901cba68d936646aa189ee07543940"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1901cba68d936646aa189ee07543940">crossover_circuit_vectors</a> (std::span&lt; const int &gt; fixed_values, std::span&lt; const int &gt; parent1_values, std::span&lt; const int &gt; parent2_values, std::span&lt; std::span&lt; int &gt; &gt; child_values, <a class="el" href="class_random_number_generator.html">RandomNumberGenerator</a> &amp;rng)</td></tr>
 <tr class="memitem:a7b4c3c655f711327ece9f0c77e0234ff" id="r_a7b4c3c655f711327ece9f0c77e0234ff"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7b4c3c655f711327ece9f0c77e0234ff">plot_span</a> (std::span&lt; const int &gt; values, const char *filename)</td></tr>
+<tr class="memdesc:a7b4c3c655f711327ece9f0c77e0234ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a circuit-vector diagram to <code class="param">filename</code>.  <br /></td></tr>
 <tr class="memitem:ac0b4f7f98168f25ee7245223c039cc8b" id="r_ac0b4f7f98168f25ee7245223c039cc8b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac0b4f7f98168f25ee7245223c039cc8b">plot_graph</a> (const ESE::Graph &amp;graph, const char *filename)</td></tr>
+<tr class="memdesc:ac0b4f7f98168f25ee7245223c039cc8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a <code>ESE::Graph</code> diagram to <code class="param">filename</code>.  <br /></td></tr>
 </table>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Typedef Documentation</h2>
+<a id="a20b8491ebbb8e8ce55d1014bd556caad" name="a20b8491ebbb8e8ce55d1014bd556caad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b8491ebbb8e8ce55d1014bd556caad">&#9670;&#160;</a></span>FitnessFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a20b8491ebbb8e8ce55d1014bd556caad">FitnessFunction</a> = std::function&lt;double(std::span&lt;const int&gt;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callable type used by the GA to evaluate circuit fitness. </p>
+<p>This is a std::function rather than a raw function pointer so CLI optimise mode can pass a simulator configured with economic/feed overrides. </p>
+
+<p class="definition">Definition at line <a class="el" href="_required_functions_8h_source.html#l00085">85</a> of file <a class="el" href="_required_functions_8h_source.html">RequiredFunctions.h</a>.</p>
+
+</div>
+</div>
+<a id="a2b078fa7432d32764890bf930f41fe01" name="a2b078fa7432d32764890bf930f41fe01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b078fa7432d32764890bf930f41fe01">&#9670;&#160;</a></span>ValidityFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a2b078fa7432d32764890bf930f41fe01">ValidityFunction</a> = std::function&lt;bool(std::span&lt;const int&gt;)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callable type used by the GA to check circuit validity. </p>
+
+<p class="definition">Definition at line <a class="el" href="_required_functions_8h_source.html#l00090">90</a> of file <a class="el" href="_required_functions_8h_source.html">RequiredFunctions.h</a>.</p>
+
+</div>
+</div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a04bd8112cfc5d2e04893d2c7e2b0a564" name="a04bd8112cfc5d2e04893d2c7e2b0a564"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04bd8112cfc5d2e04893d2c7e2b0a564">&#9670;&#160;</a></span>check_validity() <span class="overload">[1/2]</span></h2>
@@ -173,16 +221,26 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Temporary graph validity overload retained for existing scaffold/tests. </p>
+<p>Validates a circuit graph (overload for <code>ESE::Graph</code>). </p>
+<p>Check whether an ESEGraph circuit representation is structurally valid.</p>
+<p>Convenience overload dispatching to <code><a class="el" href="_circuit_validity_8cpp.html#a14b8d306b719e69bfdaa465b37dbb160" title="Validates a circuit expressed as an ESE::Graph.">graph_check_validity()</a></code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>ESE graph representation. </td></tr>
+    <tr><td class="paramname">graph</td><td>The graph representation of the circuit to validate. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true for now. Replace when graph validity is implemented. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if valid, <code>false</code> otherwise.</dd></dl>
+<p>Validates a circuit graph (overload for <code>ESE::Graph</code>).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td><a class="el" href="namespace_e_s_e.html">ESE</a> graph representation. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the graph passes the same topology checks as the vector-based validity checker; false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00162">162</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00237">237</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
 </div>
 </div>
@@ -201,7 +259,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Basic vector validity check. </p>
+<p>Validates a circuit vector (overload for flat integer span). </p>
+<p>Check whether an encoded circuit vector is structurally valid.</p>
+<p>Convenience overload dispatching to <code><a class="el" href="_circuit_validity_8cpp.html#a3b23d8d5c07a7f762b6b5a16a782e1e7" title="Validates a circuit expressed as a flat integer circuit vector.">vector_check_validity()</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_span</td><td>The flat integer circuit vector to validate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if valid, <code>false</code> otherwise.</dd></dl>
+<p>Validates a circuit vector (overload for flat integer span).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">circuit_span</td><td>Full encoded circuit vector. </td></tr>
@@ -210,7 +278,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the vector is structurally well-formed. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00157">157</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_validity_8cpp_source.html#l00223">223</a> of file <a class="el" href="_circuit_validity_8cpp_source.html">CircuitValidity.cpp</a>.</p>
 
 </div>
 </div>
@@ -232,13 +300,13 @@ Functions</h2></td></tr>
 <p>Temporary graph overload retained for existing scaffold/tests. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">graph</td><td>ESE graph representation. </td></tr>
+    <tr><td class="paramname">graph</td><td><a class="el" href="namespace_e_s_e.html">ESE</a> graph representation. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Placeholder performance until the graph-to-vector path is finalised. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00479">479</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00469">469</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
 
 </div>
 </div>
@@ -266,7 +334,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Economic value in pounds per second, or a large negative penalty for malformed/non-convergent circuits. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00473">473</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00463">463</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_c_simulator_8cpp_source.html#l00469">circuit_performance()</a>.</p>
 
 </div>
 </div>
@@ -340,7 +410,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l00485">485</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l01570">1570</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_g_a_typedefs_8h_source.html#l00131">cv_fixed_prefix_length()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00110">cv_num_units()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00143">cv_variable_length()</a>, and <a class="el" href="class_random_number_generator.html#aa47eb4fb19ef1314729671d3ff2289d7">RandomNumberGenerator::rand()</a>.</p>
 
@@ -370,7 +440,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l00316">316</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l01388">1388</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_g_a_typedefs_8h_source.html#l00131">cv_fixed_prefix_length()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00117">cv_num_products()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00110">cv_num_units()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00169">cv_tailings_dest()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00123">cv_unit_type()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00143">cv_variable_length()</a>, and <a class="el" href="class_random_number_generator.html#aa47eb4fb19ef1314729671d3ff2289d7">RandomNumberGenerator::rand()</a>.</p>
 
@@ -405,7 +475,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l00419">419</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l01490">1490</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_g_a_typedefs_8h_source.html#l00131">cv_fixed_prefix_length()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00117">cv_num_products()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00110">cv_num_units()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00169">cv_tailings_dest()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00143">cv_variable_length()</a>, and <a class="el" href="class_random_number_generator.html#aa47eb4fb19ef1314729671d3ff2289d7">RandomNumberGenerator::rand()</a>.</p>
 
@@ -435,7 +505,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l00569">569</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l01706">1706</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
 
 </div>
 </div>
@@ -491,8 +561,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a33a5518a123e9c8cbe4f0606ac6baf14" name="a33a5518a123e9c8cbe4f0606ac6baf14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33a5518a123e9c8cbe4f0606ac6baf14">&#9670;&#160;</a></span>optimize_span()</h2>
+<a id="a534a73061fd39ab2d659e32b2c22dae0" name="a534a73061fd39ab2d659e32b2c22dae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534a73061fd39ab2d659e32b2c22dae0">&#9670;&#160;</a></span>optimize_span()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,12 +575,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double(*</td>          <td class="paramname"><span class="paramname"><em>performance_function&#160;</em></span>)(const std::span&lt; const int &gt;), </td>
+          <td class="paramtype">const <a class="el" href="#a20b8491ebbb8e8ce55d1014bd556caad">FitnessFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>performance_function</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool(*</td>          <td class="paramname"><span class="paramname"><em>validity_checker&#160;</em></span>)(const std::span&lt; const int &gt;), </td>
+          <td class="paramtype">const <a class="el" href="#a2b078fa7432d32764890bf930f41fe01">ValidityFunction</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>validity_checker</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -520,9 +590,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l00299">299</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_genetic___algorithm_8cpp_source.html#l01371">1371</a> of file <a class="el" href="_genetic___algorithm_8cpp_source.html">Genetic_Algorithm.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_genetic___algorithm_8cpp_source.html#l00016">default_ga_parameters</a>, and <a class="el" href="_genetic___algorithm_8cpp_source.html#l00138">optimize_span()</a>.</p>
+<p class="reference">References <a class="el" href="_genetic___algorithm_8cpp_source.html#l00018">default_ga_parameters</a>, and <a class="el" href="_genetic___algorithm_8cpp_source.html#l00825">optimize_span()</a>.</p>
 
 </div>
 </div>
@@ -545,7 +615,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00006">6</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+<p>Writes a <code>ESE::Graph</code> diagram to <code class="param">filename</code>. </p>
+<p>Generates DOT source via <code><a class="el" href="namespacevisualization.html#ae3a5a3a46584cb543a0cc6a3e991e8ac" title="Builds a Graphviz dot representation of a generic ESE::Graph.">visualization::build_graph_dot()</a></code> and persists it using <code>write_or_render()</code>, which will request Graphviz to produce an image when the extension is recognised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>Graph to visualise. </td></tr>
+    <tr><td class="paramname">filename</td><td>Destination file path (<code>nullptr</code> is a no-op). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00428">428</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_visualization_8cpp_source.html#l00308">visualization::build_graph_dot()</a>.</p>
 
 </div>
 </div>
@@ -568,9 +650,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00004">4</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+<p>Writes a circuit-vector diagram to <code class="param">filename</code>. </p>
+<p>Generates DOT source via <code><a class="el" href="namespacevisualization.html#af91d8719a03c36335217b3c357ff89e1" title="Builds a Graphviz dot representation of a circuit vector.">visualization::build_circuit_dot()</a></code> and persists it using <code>write_or_render()</code>, which will request Graphviz to produce an image when the extension is recognised.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">values</td><td>The flat integer circuit vector to visualise. </td></tr>
+    <tr><td class="paramname">filename</td><td>Destination file path (<code>nullptr</code> is a no-op). </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>, and <a class="el" href="_command_executor_8cpp_source.html#l00328">cli::VisualiseExecutor::Execute()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_visualization_8cpp_source.html#l00413">413</a> of file <a class="el" href="_visualization_8cpp_source.html">Visualization.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_visualization_8cpp_source.html#l00129">visualization::build_circuit_dot()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00375">cli::OptimiseExecutor::Execute()</a>.</p>
 
 </div>
 </div>
@@ -588,10 +682,10 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Improved PRNG using mt19937 (Mersenne Twister Algorithm) with one generator per OpenMP thread, using the provided fast_random1 approach.</p>
+<p>This approach is an improvement from the old LCG framework, as it covers a much larger period, is thread safe, and is made compatible with the existing RNG usage. </p>
 
-<p class="definition">Definition at line <a class="el" href="_p_r_n_g_8cpp_source.html#l00009">9</a> of file <a class="el" href="_p_r_n_g_8cpp_source.html">PRNG.cpp</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_p_r_n_g_8cpp_source.html#l00024">24</a> of file <a class="el" href="_p_r_n_g_8cpp_source.html">PRNG.cpp</a>.</p>
 
 </div>
 </div>

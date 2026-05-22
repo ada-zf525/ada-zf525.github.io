@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['ok_0',['ok',['../structcircuit__vector_1_1_parse_result.html#a1f862b2c1690eae1579c9f1b199e14b5',1,'circuit_vector::ParseResult::ok'],['../structcli_1_1_parse_result.html#a1675d35e46651af550820593666ac54b',1,'cli::ParseResult::ok']]],
-  ['optimise_1',['Optimise',['../namespacecli.html#a01859dd944bdbe279e309627e6adbeefaeac1e7a10a4c36fbc10179415bea5066',1,'cli']]],
-  ['optimiseexecutor_2',['OptimiseExecutor',['../classcli_1_1_optimise_executor.html',1,'cli::OptimiseExecutor'],['../classcli_1_1_optimise_executor.html#afa36163b4835d3d06810fd5f05211215',1,'cli::OptimiseExecutor::OptimiseExecutor()']]],
-  ['optimize_5fspan_3',['optimize_span',['../_genetic___algorithm_8h.html#ae1cdf21f3b52d32d7d51fd5aa18e4ea9',1,'optimize_span(std::span&lt; const int &gt; fixed_prefix, double(*performance_function)(const std::span&lt; const int &gt;), bool(*validity_checker)(const std::span&lt; const int &gt;), GA_Functions ga_functions, Algorithm_Parameters algorithm_parameters):&#160;Genetic_Algorithm.cpp'],['../_required_functions_8h.html#a33a5518a123e9c8cbe4f0606ac6baf14',1,'optimize_span(std::span&lt; const int &gt; fixed_prefix, double(*performance_function)(const std::span&lt; const int &gt;), bool(*validity_checker)(const std::span&lt; const int &gt;), GA_Functions ga_functions):&#160;Genetic_Algorithm.cpp'],['../_genetic___algorithm_8cpp.html#a91953801a8e7d422debbcce0dec55e99',1,'optimize_span(std::span&lt; const int &gt; const fixed_prefix, double(*performance_function)(const std::span&lt; const int &gt;), bool(*validity_checker)(const std::span&lt; const int &gt;), GA_Functions ga_functions, Algorithm_Parameters algorithm_parameters):&#160;Genetic_Algorithm.cpp'],['../_genetic___algorithm_8cpp.html#ad108c14235a2e31e7e9e1564f3160159',1,'optimize_span(std::span&lt; const int &gt; const fixed_prefix, double(*performance_function)(const std::span&lt; const int &gt;), bool(*validity_checker)(const std::span&lt; const int &gt;), GA_Functions ga_functions):&#160;Genetic_Algorithm.cpp']]],
-  ['options_4',['options',['../structcli_1_1_parse_result.html#ab751a7c7f84dc80e4c4732ed0065e18e',1,'cli::ParseResult']]],
-  ['output_5',['output',['../class_c_unit.html#afd91d307d051f8e498233c0b4031e9ef',1,'CUnit']]],
-  ['output_5fcount_6',['output_count',['../structcircuit__vector_1_1_circuit_unit_spec.html#a7a6387475562cef6d69c9f7cce025de4',1,'circuit_vector::CircuitUnitSpec']]],
-  ['output_5fcsv_7',['output_csv',['../structcli_1_1_output_paths.html#a88bac384bd7ad5706bdbd77daa21d216',1,'cli::OutputPaths']]],
-  ['outputpaths_8',['OutputPaths',['../structcli_1_1_output_paths.html',1,'cli']]],
-  ['outputs_9',['outputs',['../structcli_1_1_cli_options.html#abd9e1ef0815761337320a1a5676381a9',1,'cli::CliOptions']]]
+  ['n_5finputs_0',['n_inputs',['../structcircuit__vector_1_1_circuit_spec.html#a02f03fb83bb40122256f88bb66d572ce',1,'circuit_vector::CircuitSpec']]],
+  ['n_5foutputs_1',['n_outputs',['../class_c_unit.html#af69748af8665e6b6fdce051e16acd284',1,'CUnit']]],
+  ['n_5fproduct_5fstreams_2',['n_product_streams',['../structcircuit__vector_1_1_circuit_spec.html#a50ca52e734b3d572f83f925f64cfeece',1,'circuit_vector::CircuitSpec']]],
+  ['n_5funits_3',['n_units',['../structcircuit__vector_1_1_circuit_spec.html#a1edd777c9d92b1e9ceb082157b3e97ab',1,'circuit_vector::CircuitSpec']]],
+  ['name_4',['name',['../struct_vector_validity_case.html#abb52b71d5a2f72f9bd65666332e779a6',1,'VectorValidityCase::name'],['../struct_graph_validity_case.html#ae0284bd880c2fcdff7646af2ea1dcd80',1,'GraphValidityCase::name']]],
+  ['node_5fdegrees_5',['node_degrees',['../struct_graph_validity_case.html#ad3849409caf0b9cadba875bece592206',1,'GraphValidityCase']]],
+  ['none_6',['None',['../namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656a6adf97f83acf6453d4a6a4b1070f3754',1,'cli']]]
 ];

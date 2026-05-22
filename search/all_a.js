@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['lcg_5frand_0',['lcg_rand',['../class_default_random_number_generator.html#afab076ac8b4ae828b2122d9657bfbc70',1,'DefaultRandomNumberGenerator']]],
-  ['library_1',['The ESEGraph library',['../index.html#autotoc_md3',1,'']]],
-  ['log_5fstream_5f_2',['log_stream_',['../classcli_1_1_i_mode_executor.html#a38859e746f7fafd075df5f3b5361239a',1,'cli::IModeExecutor']]]
+  ['kcomponentcount_0',['kComponentCount',['../namespacemass__balance.html#a6ba9517d8679b1ebd71452c98684196d',1,'mass_balance']]],
+  ['kgormanium_1',['kGormanium',['../namespacemass__balance.html#a386bb97c52e782d24ecbb97db6e957d0',1,'mass_balance']]],
+  ['kpalusznium_2',['kPalusznium',['../namespacemass__balance.html#a5bd2b3adf7438558ea6f453004c83ee7',1,'mass_balance']]],
+  ['kwaste_3',['kWaste',['../namespacemass__balance.html#ad6d321c1a0dab48ed30569d6198b8a81',1,'mass_balance']]]
 ];

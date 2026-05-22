@@ -120,26 +120,29 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('structmass__ba
 </div><!--header-->
 <div class="contents">
 
-<p>Numerical settings for the fixed-point mass-balance solver.  
+<p>Numerical and physical options for the circuit mass-balance simulation.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a7271a240d19434eec7217019a1e4995b" id="r_a7271a240d19434eec7217019a1e4995b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7271a240d19434eec7217019a1e4995b">max_iterations</a> {1000}</td></tr>
+<tr class="memdesc:a7271a240d19434eec7217019a1e4995b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of fixed-point iterations before declaring failure.  <br /></td></tr>
 <tr class="memitem:abe7a33fe6074bd5478cdb6175ab66289" id="r_abe7a33fe6074bd5478cdb6175ab66289"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#abe7a33fe6074bd5478cdb6175ab66289">relative_tolerance</a> {1.0e-6}</td></tr>
-<tr class="memdesc:abe7a33fe6074bd5478cdb6175ab66289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative convergence tolerance for unit-feed changes.  <br /></td></tr>
-<tr class="memitem:a7271a240d19434eec7217019a1e4995b" id="r_a7271a240d19434eec7217019a1e4995b"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7271a240d19434eec7217019a1e4995b">max_iterations</a> {10000}</td></tr>
-<tr class="memdesc:a7271a240d19434eec7217019a1e4995b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of fixed-point iterations before failure.  <br /></td></tr>
+<tr class="memdesc:abe7a33fe6074bd5478cdb6175ab66289"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relative convergence tolerance for unit feed updates.  <br /></td></tr>
 <tr class="memitem:a54003c33f4e0badd732446b20fa4b16f" id="r_a54003c33f4e0badd732446b20fa4b16f"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a54003c33f4e0badd732446b20fa4b16f">min_solid_volumetric_flow_m3_per_s</a> {1.0e-10}</td></tr>
-<tr class="memdesc:a54003c33f4e0badd732446b20fa4b16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower bound on solid volumetric flow for residence-time calculation.  <br /></td></tr>
+<tr class="memdesc:a54003c33f4e0badd732446b20fa4b16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimum solid volumetric flow in m^3/s used to avoid zero-flow residence-time singularities.  <br /></td></tr>
 <tr class="memitem:a1f84bf9f3e8b856df95e46837cc44009" id="r_a1f84bf9f3e8b856df95e46837cc44009"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a1f84bf9f3e8b856df95e46837cc44009">failure_fitness</a> {-1.0e100}</td></tr>
-<tr class="memdesc:a1f84bf9f3e8b856df95e46837cc44009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fitness value returned for malformed or non-convergent circuits.  <br /></td></tr>
+<tr class="memdesc:a1f84bf9f3e8b856df95e46837cc44009"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fitness returned when the circuit is invalid or fails to converge.  <br /></td></tr>
+<tr class="memitem:a3bc7bc0acf370c5672ee06848562604d" id="r_a3bc7bc0acf370c5672ee06848562604d"><td class="memItemLeft"><a class="el" href="structmass__balance_1_1_s_stream.html">SStream</a>&#160;</td><td class="memItemRight"><a class="el" href="#a3bc7bc0acf370c5672ee06848562604d">feed</a></td></tr>
+<tr class="memdesc:a3bc7bc0acf370c5672ee06848562604d"><td class="mdescLeft">&#160;</td><td class="mdescRight">External feed composition in kg/s.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Numerical settings for the fixed-point mass-balance solver. </p>
+<div class="textblock"><p>Numerical and physical options for the circuit mass-balance simulation. </p>
+<p>These options intentionally contain solver controls and feed composition, but not product prices or unit operating costs. Economic parameters are owned separately by <a class="el" href="struct_s_economic_parameters.html" title="Economic constants for the project base case.">SEconomicParameters</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00106">106</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00111">111</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
 <a id="a1f84bf9f3e8b856df95e46837cc44009" name="a1f84bf9f3e8b856df95e46837cc44009"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1f84bf9f3e8b856df95e46837cc44009">&#9670;&#160;</a></span>failure_fitness</h2>
@@ -153,9 +156,42 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fitness value returned for malformed or non-convergent circuits. </p>
+<p>Fitness returned when the circuit is invalid or fails to converge. </p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00129">129</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00132">132</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_c_simulator_8cpp_source.html#l00469">circuit_performance()</a>.</p>
+
+</div>
+</div>
+<a id="a3bc7bc0acf370c5672ee06848562604d" name="a3bc7bc0acf370c5672ee06848562604d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc7bc0acf370c5672ee06848562604d">&#9670;&#160;</a></span>feed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmass__balance_1_1_s_stream.html">SStream</a> mass_balance::SSimulationOptions::feed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{[] {</div>
+<div class="line">        <a class="code hl_struct" href="structmass__balance_1_1_s_stream.html">SStream</a> base_feed;</div>
+<div class="line">        base_feed.<a class="code hl_variable" href="structmass__balance_1_1_s_stream.html#a30e901c0ecac87a66cc68d3cfdca09b6">component_kg_per_s</a>[<a class="code hl_variable" href="namespacemass__balance.html#a5bd2b3adf7438558ea6f453004c83ee7">kPalusznium</a>] = 8.0;</div>
+<div class="line">        base_feed.component_kg_per_s[<a class="code hl_variable" href="namespacemass__balance.html#a386bb97c52e782d24ecbb97db6e957d0">kGormanium</a>] = 12.0;</div>
+<div class="line">        base_feed.component_kg_per_s[<a class="code hl_variable" href="namespacemass__balance.html#ad6d321c1a0dab48ed30569d6198b8a81">kWaste</a>] = 80.0;</div>
+<div class="line">        <span class="keywordflow">return</span> base_feed;</div>
+<div class="line">    }()}</div>
+<div class="ttc" id="anamespacemass__balance_html_a386bb97c52e782d24ecbb97db6e957d0"><div class="ttname"><a href="namespacemass__balance.html#a386bb97c52e782d24ecbb97db6e957d0">mass_balance::kGormanium</a></div><div class="ttdeci">constexpr int kGormanium</div><div class="ttdoc">Component index for gormanium.</div><div class="ttdef"><b>Definition</b> <a href="_c_simulator_8h_source.html#l00050">CSimulator.h:50</a></div></div>
+<div class="ttc" id="anamespacemass__balance_html_a5bd2b3adf7438558ea6f453004c83ee7"><div class="ttname"><a href="namespacemass__balance.html#a5bd2b3adf7438558ea6f453004c83ee7">mass_balance::kPalusznium</a></div><div class="ttdeci">constexpr int kPalusznium</div><div class="ttdoc">Component index for palusznium.</div><div class="ttdef"><b>Definition</b> <a href="_c_simulator_8h_source.html#l00045">CSimulator.h:45</a></div></div>
+<div class="ttc" id="anamespacemass__balance_html_ad6d321c1a0dab48ed30569d6198b8a81"><div class="ttname"><a href="namespacemass__balance.html#ad6d321c1a0dab48ed30569d6198b8a81">mass_balance::kWaste</a></div><div class="ttdeci">constexpr int kWaste</div><div class="ttdoc">Component index for waste.</div><div class="ttdef"><b>Definition</b> <a href="_c_simulator_8h_source.html#l00055">CSimulator.h:55</a></div></div>
+<div class="ttc" id="astructmass__balance_1_1_s_stream_html"><div class="ttname"><a href="structmass__balance_1_1_s_stream.html">mass_balance::SStream</a></div><div class="ttdoc">Component mass-flow vector for one process stream.</div><div class="ttdef"><b>Definition</b> <a href="_c_simulator_8h_source.html#l00065">CSimulator.h:66</a></div></div>
+<div class="ttc" id="astructmass__balance_1_1_s_stream_html_a30e901c0ecac87a66cc68d3cfdca09b6"><div class="ttname"><a href="structmass__balance_1_1_s_stream.html#a30e901c0ecac87a66cc68d3cfdca09b6">mass_balance::SStream::component_kg_per_s</a></div><div class="ttdeci">double component_kg_per_s[kComponentCount]</div><div class="ttdef"><b>Definition</b> <a href="_c_simulator_8h_source.html#l00067">CSimulator.h:67</a></div></div>
+</div><!-- fragment -->
+<p>External feed composition in kg/s. </p>
+<p>Base case from the project brief: palusznium = 8 kg/s gormanium = 12 kg/s waste = 80 kg/s </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00142">142</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
 
 </div>
 </div>
@@ -166,12 +202,12 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int mass_balance::SSimulationOptions::max_iterations {10000}</td>
+          <td class="memname">int mass_balance::SSimulationOptions::max_iterations {1000}</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Maximum number of fixed-point iterations before failure. </p>
+<p>Maximum number of fixed-point iterations before declaring failure. </p>
 
 <p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00116">116</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
 
@@ -189,10 +225,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Lower bound on solid volumetric flow for residence-time calculation. </p>
-<p>This prevents malformed/degenerate circuits from producing effectively infinite residence times. </p>
+<p>Minimum solid volumetric flow in m^3/s used to avoid zero-flow residence-time singularities. </p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00124">124</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00127">127</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
 
 </div>
 </div>
@@ -208,9 +243,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Relative convergence tolerance for unit-feed changes. </p>
+<p>Relative convergence tolerance for unit feed updates. </p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00111">111</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00121">121</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
 
 </div>
 </div>

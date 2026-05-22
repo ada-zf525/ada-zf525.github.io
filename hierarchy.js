@@ -29,6 +29,9 @@ var hierarchy =
     [ "RandomNumberGenerator", "class_random_number_generator.html", [
       [ "DefaultRandomNumberGenerator", "class_default_random_number_generator.html", null ]
     ] ],
+    [ "SA_Parameters", "struct_s_a___parameters.html", null ],
+    [ "cli::SaOverrides", "structcli_1_1_sa_overrides.html", null ],
+    [ "SConvergenceValidityResult", "struct_s_convergence_validity_result.html", null ],
     [ "SEconomicParameters", "struct_s_economic_parameters.html", null ],
     [ "mass_balance::SProductStreams", "structmass__balance_1_1_s_product_streams.html", null ],
     [ "mass_balance::SSimulationOptions", "structmass__balance_1_1_s_simulation_options.html", null ],

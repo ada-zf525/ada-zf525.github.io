@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['balance_20benchmark_0',['Run the mass-balance benchmark',['../index.html#autotoc_md9',1,'']]],
-  ['balance_20simulator_1',['Mass-balance simulator',['../index.html#autotoc_md4',1,'']]],
-  ['baseresult_2',['BaseResult',['../struct_base_result.html',1,'']]],
-  ['baseresult_3c_20std_3a_3aspan_3c_20int_20_3e_20_3e_3',['BaseResult&lt; std::span&lt; int &gt; &gt;',['../struct_base_result_3_01std_1_1span_3_01int_01_4_01_4.html',1,'']]],
-  ['benchmark_4',['Run the mass-balance benchmark',['../index.html#autotoc_md9',1,'']]],
-  ['build_5',['Build',['../index.html#autotoc_md5',1,'']]]
+  ['add_0',['Add',['../structmass__balance_1_1_s_stream.html#a07ce03a8d388af3fb2b3e29d8ffdc5b4',1,'mass_balance::SStream']]],
+  ['ai_20declaration_1',['AI Declaration',['../index.html#autotoc_md13',1,'']]],
+  ['algorithm_20ga_20_3a_2',['Genetic Algorithm (GA):',['../index.html#autotoc_md3',1,'']]],
+  ['algorithm_5fparameters_3',['Algorithm_Parameters',['../struct_algorithm___parameters.html',1,'']]]
 ];

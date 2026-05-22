@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['balance_20benchmark_0',['Run the mass-balance benchmark',['../index.html#autotoc_md9',1,'']]],
-  ['balance_20simulator_1',['Mass-balance simulator',['../index.html#autotoc_md4',1,'']]],
-  ['benchmark_2',['Run the mass-balance benchmark',['../index.html#autotoc_md9',1,'']]],
-  ['build_3',['Build',['../index.html#autotoc_md5',1,'']]]
+  ['ai_20declaration_0',['AI Declaration',['../index.html#autotoc_md13',1,'']]],
+  ['algorithm_20ga_20_3a_1',['Genetic Algorithm (GA):',['../index.html#autotoc_md3',1,'']]]
 ];

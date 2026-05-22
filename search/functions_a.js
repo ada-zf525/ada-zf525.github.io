@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['rand_0',['rand',['../class_default_random_number_generator.html#aa08e1529f5056d94528947c13604562b',1,'DefaultRandomNumberGenerator::rand()'],['../class_random_number_generator.html#aa47eb4fb19ef1314729671d3ff2289d7',1,'RandomNumberGenerator::rand()']]],
-  ['random_1',['random',['../class_default_random_number_generator.html#ad996c03e10cad83698e2b80909d51200',1,'DefaultRandomNumberGenerator::random()'],['../class_random_number_generator.html#ae70c71a31a0f026640cb16c2cd8b0a8e',1,'RandomNumberGenerator::random(double min=0.0, double max=1.0)=0']]],
-  ['randomnumbergenerator_2',['RandomNumberGenerator',['../class_random_number_generator.html#af9dcb7ab679602b5f4e5eef0be6acddc',1,'RandomNumberGenerator']]],
-  ['run_3',['Run',['../classcli_1_1_command_executor.html#a75dabe9ac4b5a106cbbd8fdf7d711cf8',1,'cli::CommandExecutor']]],
-  ['run_5fgraph_5fvalidity_5fcases_4',['run_graph_validity_cases',['../_circuit_validity_test_framework_8h.html#afe127bec707095c283eb574b4d141954',1,'CircuitValidityTestFramework.h']]],
-  ['run_5fvector_5fvalidity_5fcases_5',['run_vector_validity_cases',['../_circuit_validity_test_framework_8h.html#ab504e7246886bb3c39c439becbc54b51',1,'CircuitValidityTestFramework.h']]]
+  ['parse_0',['Parse',['../classcli_1_1_cli_parser.html#a84f52dbbb25b4478c7b3458432cfc4d5',1,'cli::CliParser']]],
+  ['parse_5fcircuit_5fvector_1',['parse_circuit_vector',['../namespacecircuit__vector.html#aa675e524e41943dfcd6a97d7bbfcbded',1,'circuit_vector']]],
+  ['plot_5fcircuit_5fdiagnostic_2',['plot_circuit_diagnostic',['../namespacevisualization.html#ab9190efa6a4ecf2ba482541d30ee7d44',1,'visualization']]],
+  ['plot_5fgraph_3',['plot_graph',['../_required_functions_8h.html#ac0b4f7f98168f25ee7245223c039cc8b',1,'plot_graph(const ESE::Graph &amp;graph, const char *filename):&#160;Visualization.cpp'],['../_visualization_8cpp.html#ac0b4f7f98168f25ee7245223c039cc8b',1,'plot_graph(const ESE::Graph &amp;graph, const char *filename):&#160;Visualization.cpp']]],
+  ['plot_5fspan_4',['plot_span',['../_required_functions_8h.html#a7b4c3c655f711327ece9f0c77e0234ff',1,'plot_span(std::span&lt; const int &gt; values, const char *filename):&#160;Visualization.cpp'],['../_visualization_8cpp.html#a7b4c3c655f711327ece9f0c77e0234ff',1,'plot_span(std::span&lt; const int &gt; values, const char *filename):&#160;Visualization.cpp']]]
 ];

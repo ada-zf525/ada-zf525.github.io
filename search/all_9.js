@@ -1,7 +1,15 @@
 var searchData=
 [
-  ['kcomponentcount_0',['kComponentCount',['../namespacemass__balance.html#a6ba9517d8679b1ebd71452c98684196d',1,'mass_balance']]],
-  ['kgormanium_1',['kGormanium',['../namespacemass__balance.html#a386bb97c52e782d24ecbb97db6e957d0',1,'mass_balance']]],
-  ['kpalusznium_2',['kPalusznium',['../namespacemass__balance.html#a5bd2b3adf7438558ea6f453004c83ee7',1,'mass_balance']]],
-  ['kwaste_3',['kWaste',['../namespacemass__balance.html#ad6d321c1a0dab48ed30569d6198b8a81',1,'mass_balance']]]
+  ['id_0',['id',['../structcircuit__vector_1_1_circuit_unit_spec.html#a92ec6baa38616794fbf857bc4e87c953',1,'circuit_vector::CircuitUnitSpec']]],
+  ['imodeexecutor_1',['IModeExecutor',['../classcli_1_1_i_mode_executor.html',1,'cli::IModeExecutor'],['../classcli_1_1_i_mode_executor.html#aa103f797e61a721dd9dd1ee73ac4f11b',1,'cli::IModeExecutor::IModeExecutor()']]],
+  ['improvement_5fepsilon_2',['improvement_epsilon',['../struct_algorithm___parameters.html#a5e4ff2278808cdc64d41a26e32355c0b',1,'Algorithm_Parameters::improvement_epsilon'],['../struct_s_a___parameters.html#a29905ca7105d01a377d2bbfb6a1952b3',1,'SA_Parameters::improvement_epsilon']]],
+  ['initial_5fattempt_5fmultiplier_3',['initial_attempt_multiplier',['../struct_algorithm___parameters.html#a08cbf4dffcff3ef604c2b1d3404ddbb4',1,'Algorithm_Parameters::initial_attempt_multiplier'],['../struct_s_a___parameters.html#a6f11982e1f68dcc3b61caa0675a7db1e',1,'SA_Parameters::initial_attempt_multiplier']]],
+  ['initial_5ftemperature_4',['initial_temperature',['../structcli_1_1_sa_overrides.html#a8dfd19dfdecb22d5f1c3de0a9a9c179c',1,'cli::SaOverrides::initial_temperature'],['../struct_s_a___parameters.html#a8241d8a8ca6ee141a771da3524e7e1c6',1,'SA_Parameters::initial_temperature']]],
+  ['interface_5',['Command-Line Interface',['../index.html#autotoc_md10',1,'']]],
+  ['invalid_6',['Invalid',['../namespacecircuit__vector.html#a169c3ff4e708268fdf95376fbd6c90d4a4bbb8f967da6d1a610596d7257179c2b',1,'circuit_vector']]],
+  ['is_5foutlet_5fdestination_7',['is_outlet_destination',['../namespacecircuit__vector.html#ac9a7f54f8f74245904880dd034349f29',1,'circuit_vector']]],
+  ['is_5funit_5fdestination_8',['is_unit_destination',['../namespacecircuit__vector.html#aaefcd5447a4d6afda29fe3806646ba2b',1,'circuit_vector']]],
+  ['isfinite_9',['IsFinite',['../structmass__balance_1_1_s_stream.html#a5dbc0f62ae88d3883567b6db8deba81d',1,'mass_balance::SStream']]],
+  ['iterations_10',['iterations',['../struct_s_convergence_validity_result.html#aaac6472d66e69a754aeff5e7a35b78f5',1,'SConvergenceValidityResult::iterations'],['../structmass__balance_1_1_s_simulation_result.html#a229c7d10844520ae945d0d694ff42bf1',1,'mass_balance::SSimulationResult::iterations']]],
+  ['iterations_5fper_5ftemperature_11',['iterations_per_temperature',['../structcli_1_1_sa_overrides.html#a032ccbc6dbaf2f0867ee534c7658233c',1,'cli::SaOverrides::iterations_per_temperature'],['../struct_s_a___parameters.html#aebe10ee561558e982b1b5aabba5647fc',1,'SA_Parameters::iterations_per_temperature']]]
 ];

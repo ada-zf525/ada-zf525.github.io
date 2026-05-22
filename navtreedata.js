@@ -25,18 +25,20 @@
 var NAVTREE =
 [
   [ "Palusznium Rush", "index.html", [
-    [ "Instructions", "index.html#autotoc_md1", null ],
-    [ "Deadlines", "index.html#autotoc_md2", null ],
-    [ "The ESEGraph library", "index.html#autotoc_md3", null ],
-    [ "Mass-balance simulator", "index.html#autotoc_md4", [
-      [ "Build", "index.html#autotoc_md5", null ],
-      [ "Run tests", "index.html#autotoc_md6", null ],
-      [ "Evaluate a sample circuit", "index.html#autotoc_md7", null ],
-      [ "Evaluate a custom circuit vector", "index.html#autotoc_md8", null ],
-      [ "Run the mass-balance benchmark", "index.html#autotoc_md9", null ],
-      [ "Current diagnostic workflow", "index.html#autotoc_md10", null ]
+    [ "Overview", "index.html#autotoc_md1", [
+      [ "Mass-Balance Simulator:", "index.html#autotoc_md2", null ],
+      [ "Genetic Algorithm (GA):", "index.html#autotoc_md3", null ],
+      [ "Best Circuit Performance:", "index.html#autotoc_md4", null ],
+      [ "Convergence Performance Studies:", "index.html#autotoc_md5", null ],
+      [ "Economic Sensitivity Studies:", "index.html#autotoc_md6", null ],
+      [ "High Performance Computing (HPC) Capabilities:", "index.html#autotoc_md7", null ]
     ] ],
-    [ "Documentation", "index.html#autotoc_md11", null ],
+    [ "Repository Layout", "index.html#autotoc_md8", null ],
+    [ "Building", "index.html#autotoc_md9", null ],
+    [ "Command-Line Interface", "index.html#autotoc_md10", null ],
+    [ "Development Guide", "index.html#autotoc_md11", null ],
+    [ "ESEGraph Submodule", "index.html#autotoc_md12", null ],
+    [ "AI Declaration", "index.html#autotoc_md13", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -62,7 +64,8 @@ var NAVTREE =
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ]
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -71,7 +74,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_circuit_8cpp.html",
-"namespacecli.html#aceb74be7930f9524e6ccffbfc2fb0656ae44bf5768e6e0c85d5904094f20336c9"
+"hierarchy.html",
+"structcli_1_1_parse_result.html#a6ae692fcc0df30fe54ced105d2d832f4"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

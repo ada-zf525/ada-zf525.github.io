@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mass_20balance_20benchmark_0',['Run the mass-balance benchmark',['../index.html#autotoc_md9',1,'']]],
-  ['mass_20balance_20simulator_1',['Mass-balance simulator',['../index.html#autotoc_md4',1,'']]]
+  ['high_20performance_20computing_20hpc_20capabilities_3a_0',['High Performance Computing (HPC) Capabilities:',['../index.html#autotoc_md7',1,'']]],
+  ['hpc_20capabilities_3a_1',['High Performance Computing (HPC) Capabilities:',['../index.html#autotoc_md7',1,'']]]
 ];

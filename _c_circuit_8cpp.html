@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_c_circuit_8cp
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab70d8a47f96ae3de61dbec2d9e16a3bc" id="r_ab70d8a47f96ae3de61dbec2d9e16a3bc"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab70d8a47f96ae3de61dbec2d9e16a3bc">check_validity</a> (const ESE::CSRGraph &amp;graph)</td></tr>
+<tr class="memdesc:ab70d8a47f96ae3de61dbec2d9e16a3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates a circuit expressed as a CSR (Compressed Sparse Row) graph.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ab70d8a47f96ae3de61dbec2d9e16a3bc" name="ab70d8a47f96ae3de61dbec2d9e16a3bc"></a>
@@ -148,9 +149,19 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_c_circuit_8cpp_source.html#l00009">9</a> of file <a class="el" href="_c_circuit_8cpp_source.html">CCircuit.cpp</a>.</p>
+<p>Validates a circuit expressed as a CSR (Compressed Sparse Row) graph. </p>
+<p>Upcasts <code class="param">graph</code> to the base <code>ESE::Graph</code> and delegates to <code><a class="el" href="_circuit_validity_8h.html#a14b8d306b719e69bfdaa465b37dbb160" title="Validates a circuit expressed as an ESE::Graph.">graph_check_validity()</a></code>, which verifies certain rules such as the reachability of every unit from the feed, no self-loops, and that each unit has access to at least two distinct final outlets.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">graph</td><td>The CSR format graph representation of the circuit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the graph satisfies all of our validity constraints, <code>false</code> otherwise. </dd></dl>
 
-<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00130">graph_check_validity()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_circuit_8cpp_source.html#l00022">22</a> of file <a class="el" href="_c_circuit_8cpp_source.html">CCircuit.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_circuit_validity_8cpp_source.html#l00187">graph_check_validity()</a>.</p>
 
 </div>
 </div>

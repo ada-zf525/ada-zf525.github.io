@@ -131,8 +131,28 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('_p_r_n_g_8cpp.
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac647fbbbd8ca511f2be5871dfc2c0921" id="r_ac647fbbbd8ca511f2be5871dfc2c0921"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac647fbbbd8ca511f2be5871dfc2c0921">seed_rngs</a> (unsigned seed)</td></tr>
+<tr class="memitem:adda680d8f98ba8c9b03486c2bbd4351c" id="r_adda680d8f98ba8c9b03486c2bbd4351c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adda680d8f98ba8c9b03486c2bbd4351c">finalise_rngs</a> ()</td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="adda680d8f98ba8c9b03486c2bbd4351c" name="adda680d8f98ba8c9b03486c2bbd4351c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda680d8f98ba8c9b03486c2bbd4351c">&#9670;&#160;</a></span>finalise_rngs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finalise_rngs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_p_r_n_g_8cpp_source.html#l00135">135</a> of file <a class="el" href="_p_r_n_g_8cpp_source.html">PRNG.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ac647fbbbd8ca511f2be5871dfc2c0921" name="ac647fbbbd8ca511f2be5871dfc2c0921"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac647fbbbd8ca511f2be5871dfc2c0921">&#9670;&#160;</a></span>seed_rngs()</h2>
 
@@ -147,10 +167,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Improved PRNG using mt19937 (Mersenne Twister Algorithm) with one generator per OpenMP thread, using the provided fast_random1 approach.</p>
+<p>This approach is an improvement from the old LCG framework, as it covers a much larger period, is thread safe, and is made compatible with the existing RNG usage. </p>
 
-<p class="definition">Definition at line <a class="el" href="_p_r_n_g_8cpp_source.html#l00009">9</a> of file <a class="el" href="_p_r_n_g_8cpp_source.html">PRNG.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_p_r_n_g_8cpp_source.html#l00024">24</a> of file <a class="el" href="_p_r_n_g_8cpp_source.html">PRNG.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00231">cli::OptimiseExecutor::Execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_command_executor_8cpp_source.html#l00375">cli::OptimiseExecutor::Execute()</a>.</p>
 
 </div>
 </div>

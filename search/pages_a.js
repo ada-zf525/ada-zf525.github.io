@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['sample_20circuit_0',['Evaluate a sample circuit',['../index.html#autotoc_md7',1,'']]],
-  ['simulator_1',['Mass-balance simulator',['../index.html#autotoc_md4',1,'']]]
+  ['mass_20balance_20simulator_3a_0',['Mass-Balance Simulator:',['../index.html#autotoc_md2',1,'']]]
 ];

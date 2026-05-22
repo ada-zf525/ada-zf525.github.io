@@ -5,5 +5,5 @@ var searchData=
   ['n_5fproduct_5fstreams_2',['n_product_streams',['../structcircuit__vector_1_1_circuit_spec.html#a50ca52e734b3d572f83f925f64cfeece',1,'circuit_vector::CircuitSpec']]],
   ['n_5funits_3',['n_units',['../structcircuit__vector_1_1_circuit_spec.html#a1edd777c9d92b1e9ceb082157b3e97ab',1,'circuit_vector::CircuitSpec']]],
   ['name_4',['name',['../struct_vector_validity_case.html#abb52b71d5a2f72f9bd65666332e779a6',1,'VectorValidityCase::name'],['../struct_graph_validity_case.html#ae0284bd880c2fcdff7646af2ea1dcd80',1,'GraphValidityCase::name']]],
-  ['node_5fdegrees_5',['node_degrees',['../struct_graph_validity_case.html#ac7bcaf34e1ac5b852b4026535463c708',1,'GraphValidityCase']]]
+  ['node_5fdegrees_5',['node_degrees',['../struct_graph_validity_case.html#ad3849409caf0b9cadba875bece592206',1,'GraphValidityCase']]]
 ];

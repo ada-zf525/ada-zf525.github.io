@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_circuit.
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9d62661b452c4d4ef5d6e75f0278cbf" id="r_ae9d62661b452c4d4ef5d6e75f0278cbf"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ae9d62661b452c4d4ef5d6e75f0278cbf">Circuit</a> (int num_units)</td></tr>
+<tr class="memdesc:ae9d62661b452c4d4ef5d6e75f0278cbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a <a class="el" href="class_circuit.html">Circuit</a> with a fixed number of separation units.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -159,7 +160,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_c_circuit_8cpp_source.html#l00014">14</a> of file <a class="el" href="_c_circuit_8cpp_source.html">CCircuit.cpp</a>.</p>
+<p>Constructs a <a class="el" href="class_circuit.html">Circuit</a> with a fixed number of separation units. </p>
+<p>Resizes the internal <code>units</code> vector to <code class="param">num_units</code> defaultly constructed <code><a class="el" href="class_c_unit.html">CUnit</a></code> objects. Any additional per-unit initialisation, such as output destinations, type flags, and so on, are the user's responsibility. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_circuit_8cpp_source.html#l00034">34</a> of file <a class="el" href="_c_circuit_8cpp_source.html">CCircuit.cpp</a>.</p>
 
 </div>
 </div>

@@ -141,11 +141,17 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:afaa2f2bd641a5bbbf857c81d7bd46749" id="r_afaa2f2bd641a5bbbf857c81d7bd46749"><td class="memItemLeft"><a class="el" href="#a169c3ff4e708268fdf95376fbd6c90d4">DestinationKind</a>&#160;</td><td class="memItemRight"><a class="el" href="#afaa2f2bd641a5bbbf857c81d7bd46749">destination_kind</a> (int destination, int n_units)</td></tr>
+<tr class="memdesc:afaa2f2bd641a5bbbf857c81d7bd46749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classifies an output destination integer relative to a circuit of <code class="param">n_units</code> units.  <br /></td></tr>
 <tr class="memitem:aaefcd5447a4d6afda29fe3806646ba2b" id="r_aaefcd5447a4d6afda29fe3806646ba2b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aaefcd5447a4d6afda29fe3806646ba2b">is_unit_destination</a> (int destination, int n_units)</td></tr>
+<tr class="memdesc:aaefcd5447a4d6afda29fe3806646ba2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <code class="param">destination</code> is referring to a separation unit.  <br /></td></tr>
 <tr class="memitem:ac9a7f54f8f74245904880dd034349f29" id="r_ac9a7f54f8f74245904880dd034349f29"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ac9a7f54f8f74245904880dd034349f29">is_outlet_destination</a> (int destination, int n_units)</td></tr>
+<tr class="memdesc:ac9a7f54f8f74245904880dd034349f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <code class="param">destination</code> refers to a final outlet stream.  <br /></td></tr>
 <tr class="memitem:ab40cf75cf18155f5baaf8bbdc13fecf5" id="r_ab40cf75cf18155f5baaf8bbdc13fecf5"><td class="memItemLeft">std::string&#160;</td><td class="memItemRight"><a class="el" href="#ab40cf75cf18155f5baaf8bbdc13fecf5">destination_name</a> (int destination, int n_units)</td></tr>
+<tr class="memdesc:ab40cf75cf18155f5baaf8bbdc13fecf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a user-readable label for a destination value.  <br /></td></tr>
 <tr class="memitem:aa675e524e41943dfcd6a97d7bbfcbded" id="r_aa675e524e41943dfcd6a97d7bbfcbded"><td class="memItemLeft"><a class="el" href="structcircuit__vector_1_1_parse_result.html">ParseResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa675e524e41943dfcd6a97d7bbfcbded">parse_circuit_vector</a> (std::span&lt; const int &gt; circuit_vector)</td></tr>
+<tr class="memdesc:aa675e524e41943dfcd6a97d7bbfcbded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses a flat integer circuit vector into a structured <code><a class="el" href="structcircuit__vector_1_1_parse_result.html">ParseResult</a></code>.  <br /></td></tr>
 <tr class="memitem:a6ccc80342aa871a7c2528e9b73b3123b" id="r_a6ccc80342aa871a7c2528e9b73b3123b"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a6ccc80342aa871a7c2528e9b73b3123b">encode_circuit_vector</a> (const <a class="el" href="structcircuit__vector_1_1_circuit_spec.html">CircuitSpec</a> &amp;spec)</td></tr>
+<tr class="memdesc:a6ccc80342aa871a7c2528e9b73b3123b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encodes a <code><a class="el" href="structcircuit__vector_1_1_circuit_spec.html">CircuitSpec</a></code> back into a flat integer circuit vector.  <br /></td></tr>
 </table>
 <a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a169c3ff4e708268fdf95376fbd6c90d4" name="a169c3ff4e708268fdf95376fbd6c90d4"></a>
@@ -199,11 +205,27 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00011">11</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+<p>Classifies an output destination integer relative to a circuit of <code class="param">n_units</code> units. </p>
+<p>The circuit encoding indicates and reserves destinations as shown below:</p><ul>
+<li>n_units: Palusznium product outlet (<code>DestinationKind::Palusz</code>)</li>
+<li>n_units + 1: Gormanium product outlet (<code>DestinationKind::Gorman</code>)</li>
+<li>n_units + 2: Tailings outlet (<code><a class="el" href="#a169c3ff4e708268fdf95376fbd6c90d4aabd06e41f09d86d39030ae377a91766d">DestinationKind::Tailings</a></code>)</li>
+<li>otherwise: <code><a class="el" href="#a169c3ff4e708268fdf95376fbd6c90d4a4bbb8f967da6d1a610596d7257179c2b">DestinationKind::Invalid</a></code> </li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>Raw destination value read from a circuit vector. </td></tr>
+    <tr><td class="paramname">n_units</td><td>Total numer of separation units in the circuit (which must be larger than zero). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code><a class="el" href="#a169c3ff4e708268fdf95376fbd6c90d4">DestinationKind</a></code> corresponding to where the <code class="param">destination</code> maps to. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">26</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">GormaniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Invalid</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">PaluszniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Tailings</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Unit</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00038">destination_name()</a>, <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00031">is_outlet_destination()</a>, <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">is_unit_destination()</a>, and <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00055">parse_circuit_vector()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00085">destination_name()</a>, <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00069">is_outlet_destination()</a>, <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00052">is_unit_destination()</a>, and <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00117">parse_circuit_vector()</a>.</p>
 
 </div>
 </div>
@@ -226,9 +248,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00038">38</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+<p>Returns a user-readable label for a destination value. </p>
+<p>This is intended for user-friendly messages and visualisation captions.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>The raw destination value from a circuit vector. </td></tr>
+    <tr><td class="paramname">n_units</td><td>Total number of separation units in the circuit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string identifying the destination. </dd></dl>
 
-<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00011">destination_kind()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">GormaniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Invalid</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">PaluszniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Tailings</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Unit</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00085">85</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">destination_kind()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">GormaniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Invalid</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">PaluszniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Tailings</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Unit</a>.</p>
 
 </div>
 </div>
@@ -247,9 +280,21 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00141">141</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+<p>Encodes a <code><a class="el" href="structcircuit__vector_1_1_circuit_spec.html">CircuitSpec</a></code> back into a flat integer circuit vector. </p>
+<p>This is the inverse of <code><a class="el" href="#aa675e524e41943dfcd6a97d7bbfcbded" title="Parses a flat integer circuit vector into a structured ParseResult.">parse_circuit_vector()</a></code>. The user is responsible for ensuring that <code class="param">spec</code> is internally consistent, such that <code>spec.n_units</code> == spec.units.size().</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spec</td><td>A fully populated <code><a class="el" href="structcircuit__vector_1_1_circuit_spec.html">CircuitSpec</a></code>, which will be obtained from a successful <code><a class="el" href="#aa675e524e41943dfcd6a97d7bbfcbded" title="Parses a flat integer circuit vector into a structured ParseResult.">parse_circuit_vector()</a></code> call or built via a program. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The flat integer vector encoding <code class="param">spec</code>. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00213">213</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_circuit_vector_parser_8h_source.html#l00038">circuit_vector::CircuitSpec::feed_destination</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00035">circuit_vector::CircuitSpec::n_inputs</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00037">circuit_vector::CircuitSpec::n_product_streams</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00036">circuit_vector::CircuitSpec::n_units</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00039">circuit_vector::CircuitSpec::units</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_circuit_graph_converter_8cpp_source.html#l00083">circuit_graph::graph_to_circuit_vector()</a>.</p>
 
 </div>
 </div>
@@ -272,9 +317,20 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00031">31</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+<p>Returns <code>true</code> if <code class="param">destination</code> refers to a final outlet stream. </p>
+<p>Final outlets are defined as the Palusznium product, Gormanium product, and Tailings streams. Anything else is either not a unit-to-unit routing, or an invalid value.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>The raw destination value from a circuit vector. </td></tr>
+    <tr><td class="paramname">n_units</td><td>Total number of separation units in the circuit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> when <code class="param">destination</code> is one of the three defined outlets, <code>false</code> otherwise. </dd></dl>
 
-<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00011">destination_kind()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">GormaniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">PaluszniumProduct</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Tailings</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00069">69</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">destination_kind()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">GormaniumProduct</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">PaluszniumProduct</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Tailings</a>.</p>
 
 </div>
 </div>
@@ -297,11 +353,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">26</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+<p>Returns <code>true</code> if <code class="param">destination</code> is referring to a separation unit. </p>
+<p>This logic is equivalent to checking whether <code><a class="el" href="#afaa2f2bd641a5bbbf857c81d7bd46749" title="Classifies an output destination integer relative to a circuit of n_units units.">destination_kind()</a></code> returns <code><a class="el" href="#a169c3ff4e708268fdf95376fbd6c90d4a19c562a36aeb455d09534f93b4f5236f">DestinationKind::Unit</a></code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">destination</td><td>Raw destination value from a circuit vector. </td></tr>
+    <tr><td class="paramname">n_units</td><td>Total number of separation units in the circuit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> when the destination is a valid unit index <code>false</code> otherwise. </dd></dl>
 
-<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00011">destination_kind()</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Unit</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00052">52</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00055">parse_circuit_vector()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">destination_kind()</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Unit</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00117">parse_circuit_vector()</a>.</p>
 
 </div>
 </div>
@@ -320,11 +387,29 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00055">55</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
+<p>Parses a flat integer circuit vector into a structured <code><a class="el" href="structcircuit__vector_1_1_parse_result.html">ParseResult</a></code>. </p>
+<p>There are several constraints enforced, such as:</p><ul>
+<li>exactly one feed input (<code>n_inputs</code> == 1).</li>
+<li>at least one unit (<code>n_units</code> &gt; 0).</li>
+<li>exactly three product streams (<code>n_product_streams</code> == 3).</li>
+<li>each unit has either 2 (Type A) or 3 (Type B) outputs.</li>
+<li>the feed must route to a unit, and not directly to an outlet.</li>
+<li>all destination values must be in the valid range between 0 and n_units + 2.</li>
+<li>the total vector lenght must match exactly with the declared structure.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circuit_vector</td><td>The flat integer encoding of the circuit. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <code><a class="el" href="structcircuit__vector_1_1_parse_result.html">ParseResult</a></code> describing the outcome of the parse. </dd></dl>
 
-<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00011">destination_kind()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00030">circuit_vector::CircuitUnitSpec::destinations</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00046">circuit_vector::ParseResult::error</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00038">circuit_vector::CircuitSpec::feed_destination</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00028">circuit_vector::CircuitUnitSpec::id</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Invalid</a>, <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">is_unit_destination()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00035">circuit_vector::CircuitSpec::n_inputs</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00037">circuit_vector::CircuitSpec::n_product_streams</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00036">circuit_vector::CircuitSpec::n_units</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00044">circuit_vector::ParseResult::ok</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00029">circuit_vector::CircuitUnitSpec::output_count</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00045">circuit_vector::ParseResult::spec</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00039">circuit_vector::CircuitSpec::units</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00117">117</a> of file <a class="el" href="_circuit_vector_parser_8cpp_source.html">CircuitVectorParser.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_circuit_validity_8cpp_source.html#l00110">vector_check_validity()</a>.</p>
+<p class="reference">References <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00026">destination_kind()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00030">circuit_vector::CircuitUnitSpec::destinations</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00046">circuit_vector::ParseResult::error</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00038">circuit_vector::CircuitSpec::feed_destination</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00028">circuit_vector::CircuitUnitSpec::id</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00024">Invalid</a>, <a class="el" href="_circuit_vector_parser_8cpp_source.html#l00052">is_unit_destination()</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00035">circuit_vector::CircuitSpec::n_inputs</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00037">circuit_vector::CircuitSpec::n_product_streams</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00036">circuit_vector::CircuitSpec::n_units</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00044">circuit_vector::ParseResult::ok</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00029">circuit_vector::CircuitUnitSpec::output_count</a>, <a class="el" href="_circuit_vector_parser_8h_source.html#l00045">circuit_vector::ParseResult::spec</a>, and <a class="el" href="_circuit_vector_parser_8h_source.html#l00039">circuit_vector::CircuitSpec::units</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_visualization_8cpp_source.html#l00129">visualization::build_circuit_dot()</a>, <a class="el" href="_visualization_8cpp_source.html#l00215">visualization::build_circuit_dot()</a>, <a class="el" href="_circuit_graph_converter_8cpp_source.html#l00049">circuit_graph::circuit_vector_to_csr_graph()</a>, <a class="el" href="_circuit_graph_converter_8cpp_source.html#l00083">circuit_graph::graph_to_circuit_vector()</a>, and <a class="el" href="_circuit_validity_8cpp_source.html#l00157">vector_check_validity()</a>.</p>
 
 </div>
 </div>

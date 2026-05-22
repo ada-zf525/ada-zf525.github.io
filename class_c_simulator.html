@@ -128,22 +128,22 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('class_c_simula
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6e829a840e8bb4edf20178bb5938e38" id="r_ab6e829a840e8bb4edf20178bb5938e38"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab6e829a840e8bb4edf20178bb5938e38">CSimulator</a> ()=default</td></tr>
-<tr class="memdesc:ab6e829a840e8bb4edf20178bb5938e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a simulator with default numerical options.  <br /></td></tr>
+<tr class="memdesc:ab6e829a840e8bb4edf20178bb5938e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct simulator with default base-case solver, feed, and economics.  <br /></td></tr>
 <tr class="memitem:a48c8657df0b7c15e817d2b187bb95747" id="r_a48c8657df0b7c15e817d2b187bb95747"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a48c8657df0b7c15e817d2b187bb95747">CSimulator</a> (<a class="el" href="structmass__balance_1_1_s_simulation_options.html">mass_balance::SSimulationOptions</a> options)</td></tr>
-<tr class="memdesc:a48c8657df0b7c15e817d2b187bb95747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a simulator with explicit numerical options.  <br /></td></tr>
+<tr class="memdesc:a48c8657df0b7c15e817d2b187bb95747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct simulator with explicit simulation options.  <br /></td></tr>
+<tr class="memitem:a8e13de454ada0b72e558427cb5d69c2e" id="r_a8e13de454ada0b72e558427cb5d69c2e"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8e13de454ada0b72e558427cb5d69c2e">CSimulator</a> (<a class="el" href="structmass__balance_1_1_s_simulation_options.html">mass_balance::SSimulationOptions</a> options, <a class="el" href="struct_s_economic_parameters.html">SEconomicParameters</a> economic_parameters)</td></tr>
+<tr class="memdesc:a8e13de454ada0b72e558427cb5d69c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct simulator with explicit simulation and economic options.  <br /></td></tr>
 <tr class="memitem:a4afb058ff510e801f3d8485481a9b89b" id="r_a4afb058ff510e801f3d8485481a9b89b"><td class="memItemLeft"><a class="el" href="structmass__balance_1_1_s_simulation_result.html">mass_balance::SSimulationResult</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4afb058ff510e801f3d8485481a9b89b">Simulate</a> (std::span&lt; const int &gt; circuit_span) const</td></tr>
-<tr class="memdesc:a4afb058ff510e801f3d8485481a9b89b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulate the steady-state mass balance of an encoded circuit.  <br /></td></tr>
 <tr class="memitem:ad698e62cb9d0fe8527901216a6b454dd" id="r_ad698e62cb9d0fe8527901216a6b454dd"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ad698e62cb9d0fe8527901216a6b454dd">EvaluatePerformance</a> (std::span&lt; const int &gt; circuit_span) const</td></tr>
-<tr class="memdesc:ad698e62cb9d0fe8527901216a6b454dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate a circuit as a scalar GA fitness value.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_circuit.html">Circuit</a> mass-balance simulator. </p>
 <p>This class is intentionally stateless apart from numerical options. A fresh instance can be created cheaply wherever a circuit needs to be evaluated. </p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00163">163</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8h_source.html#l00182">182</a> of file <a class="el" href="_c_simulator_8h_source.html">CSimulator.h</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab6e829a840e8bb4edf20178bb5938e38" name="ab6e829a840e8bb4edf20178bb5938e38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6e829a840e8bb4edf20178bb5938e38">&#9670;&#160;</a></span>CSimulator() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e829a840e8bb4edf20178bb5938e38">&#9670;&#160;</a></span>CSimulator() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -165,12 +165,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a simulator with default numerical options. </p>
+<p>Construct simulator with default base-case solver, feed, and economics. </p>
 
 </div>
 </div>
 <a id="a48c8657df0b7c15e817d2b187bb95747" name="a48c8657df0b7c15e817d2b187bb95747"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48c8657df0b7c15e817d2b187bb95747">&#9670;&#160;</a></span>CSimulator() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c8657df0b7c15e817d2b187bb95747">&#9670;&#160;</a></span>CSimulator() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,15 +192,47 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construct a simulator with explicit numerical options. </p>
+<p>Construct simulator with explicit simulation options. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">options</td><td>Convergence tolerance, iteration limit, numerical guards, and failure penalty. </td></tr>
+    <tr><td class="paramname">options</td><td>Solver controls and feed composition. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00351">351</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00335">335</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8e13de454ada0b72e558427cb5d69c2e" name="a8e13de454ada0b72e558427cb5d69c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e13de454ada0b72e558427cb5d69c2e">&#9670;&#160;</a></span>CSimulator() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSimulator::CSimulator </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmass__balance_1_1_s_simulation_options.html">mass_balance::SSimulationOptions</a></td>          <td class="paramname"><span class="paramname"><em>options</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s_economic_parameters.html">SEconomicParameters</a></td>          <td class="paramname"><span class="paramname"><em>economic_parameters</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct simulator with explicit simulation and economic options. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>Solver controls and feed composition. </td></tr>
+    <tr><td class="paramname">economic_parameters</td><td>Product values, penalties, and unit costs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00337">337</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
 
 </div>
 </div>
@@ -228,20 +260,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Evaluate a circuit as a scalar GA fitness value. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">circuit_span</td><td>Full encoded circuit vector. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Economic value in pounds per second, or a large negative penalty if the circuit is malformed or fails to converge. </dd></dl>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00452">452</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00462">462</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="reference">References <a class="el" href="_c_simulator_8h_source.html#l00161">mass_balance::SSimulationResult::converged</a>, <a class="el" href="_c_simulator_8cpp_source.html#l00343">Simulate()</a>, <a class="el" href="_c_simulator_8h_source.html#l00160">mass_balance::SSimulationResult::valid_shape</a>, and <a class="el" href="_c_simulator_8h_source.html#l00166">mass_balance::SSimulationResult::value_per_s</a>.</p>
 
-<p class="reference">References <a class="el" href="_c_simulator_8h_source.html#l00142">mass_balance::SSimulationResult::converged</a>, <a class="el" href="_c_simulator_8cpp_source.html#l00353">Simulate()</a>, <a class="el" href="_c_simulator_8h_source.html#l00141">mass_balance::SSimulationResult::valid_shape</a>, and <a class="el" href="_c_simulator_8h_source.html#l00147">mass_balance::SSimulationResult::value_per_s</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_c_simulator_8cpp_source.html#l00473">circuit_performance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_c_simulator_8cpp_source.html#l00463">circuit_performance()</a>, <a class="el" href="_command_executor_8cpp_source.html#l00468">cli::EvaluateExecutor::Execute()</a>, and <a class="el" href="_command_executor_8cpp_source.html#l00375">cli::OptimiseExecutor::Execute()</a>.</p>
 
 </div>
 </div>
@@ -268,21 +291,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Simulate the steady-state mass balance of an encoded circuit. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">circuit_span</td><td>Full circuit vector using the agreed <a class="el" href="_g_a_typedefs_8h.html">GATypedefs.h</a> encoding.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Diagnostic simulation result containing final product streams, convergence information, mass residual, and economic value.</dd></dl>
-<p>The method uses successive substitution. Each iteration computes every unit output from the previous unit-feed estimate, resets all unit feeds/products, injects the external feed, routes every unit output according to the circuit vector, and checks the relative change in unit feeds. </p>
+<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00343">343</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_c_simulator_8cpp_source.html#l00353">353</a> of file <a class="el" href="_c_simulator_8cpp_source.html">CSimulator.cpp</a>.</p>
+<p class="reference">References <a class="el" href="_c_simulator_8h_source.html#l00161">mass_balance::SSimulationResult::converged</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00161">cv_feed_dest()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00267">cv_has_valid_shape()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00110">cv_num_units()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00189">cv_unit_dest()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00123">cv_unit_type()</a>, <a class="el" href="_c_economic_model_8cpp_source.html#l00022">CEconomicModel::Evaluate()</a>, <a class="el" href="_c_simulator_8h_source.html#l00169">mass_balance::SSimulationResult::failure_reason</a>, <a class="el" href="_c_simulator_8h_source.html#l00163">mass_balance::SSimulationResult::iterations</a>, <a class="el" href="_c_simulator_8h_source.html#l00167">mass_balance::SSimulationResult::mass_residual_kg_per_s</a>, <a class="el" href="_c_simulator_8h_source.html#l00165">mass_balance::SSimulationResult::max_relative_change</a>, <a class="el" href="_c_simulator_8h_source.html#l00171">mass_balance::SSimulationResult::products</a>, <a class="el" href="_c_simulator_8h_source.html#l00160">mass_balance::SSimulationResult::valid_shape</a>, and <a class="el" href="_c_simulator_8h_source.html#l00166">mass_balance::SSimulationResult::value_per_s</a>.</p>
 
-<p class="reference">References <a class="el" href="_c_simulator_8h_source.html#l00142">mass_balance::SSimulationResult::converged</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00161">cv_feed_dest()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00267">cv_has_valid_shape()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00110">cv_num_units()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00189">cv_unit_dest()</a>, <a class="el" href="_g_a_typedefs_8h_source.html#l00123">cv_unit_type()</a>, <a class="el" href="_c_economic_model_8cpp_source.html#l00019">CEconomicModel::Evaluate()</a>, <a class="el" href="_c_simulator_8h_source.html#l00150">mass_balance::SSimulationResult::failure_reason</a>, <a class="el" href="_c_simulator_8h_source.html#l00144">mass_balance::SSimulationResult::iterations</a>, <a class="el" href="_c_simulator_8h_source.html#l00148">mass_balance::SSimulationResult::mass_residual_kg_per_s</a>, <a class="el" href="_c_simulator_8h_source.html#l00146">mass_balance::SSimulationResult::max_relative_change</a>, <a class="el" href="_c_simulator_8h_source.html#l00152">mass_balance::SSimulationResult::products</a>, <a class="el" href="_c_simulator_8h_source.html#l00141">mass_balance::SSimulationResult::valid_shape</a>, and <a class="el" href="_c_simulator_8h_source.html#l00147">mass_balance::SSimulationResult::value_per_s</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_c_simulator_8cpp_source.html#l00462">EvaluatePerformance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="convergence__validity__check_8cpp_source.html#l00058">convergence_validity_check()</a>, <a class="el" href="_c_simulator_8cpp_source.html#l00452">EvaluatePerformance()</a>, and <a class="el" href="_visualization_8cpp_source.html#l00449">visualization::plot_circuit_diagnostic()</a>.</p>
 
 </div>
 </div>
